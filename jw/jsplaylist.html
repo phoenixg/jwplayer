@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+	<head>
+		<title>Javascript 播放列表</title>
+		<meta http-equiv="Content-Type" content="text/html" />
+		<!-- 下面三个是Javascript播放列表用的文件 -->
+		<script type='text/javascript' src='jsplaylist/jquery.js'></script>
+		<script type='text/javascript' src='jsplaylist/jquery.playlist.js'></script>
+		<link rel='stylesheet' type='text/css' href='jsplaylist/playlist.css' />
+	</head>
+	<body>	
+	
+	<h3>Javascript播放列表（暂时未成功）</h3>
+	<pre></pre>
+	<div class='jw_playlist_playlist'>
+		<div class='jw_playlist_item_even'>
+			<div class='jw_playlist_image_div'>
+				<img class='jw_playlist_image' src='pic/thumbnail1.jpg'/>
+			</div>
+			<div class='jw_playlist_title'></div>
+			<div class='jw_playlist_description'></div>
+			<div class='clear'/>
+		</div>
+		<div class='jw_playlist_item_odd'>
+			<div class='jw_playlist_image_div'>
+				<img class='jw_playlist_image' src='pic/thumbnail1.jpg'/>
+			</div>
+			<div class='jw_playlist_title'></div>
+			<div class='jw_playlist_description'></div>
+			<div class='clear'/>
+		</div>		
+	</div>
+	
+	<!-- 第一部视频 -->
+	<script type='text/javascript'>
+		var s1 = new SWFObject('player.swf','player','400','324','9'); 
+		s1.addParam('allowfullscreen','true');
+		s1.addParam('allowscriptaccess','always');
+		s1.addParam('wmode','opaque');
+		s1.addParam('bgcolor','#555555');
+		s1.addParam('flashvars','file=video/video.flv');
+		s1.write('test1');
+	</script>
+	
+	<!-- 第二部视频 -->
+	<script type='text/javascript'>
+		var s1 = new SWFObject('player.swf','player','400','324','9'); 
+		s1.addParam('allowfullscreen','true');
+		s1.addParam('allowscriptaccess','always');
+		s1.addParam('wmode','opaque');
+		s1.addParam('bgcolor','#555555');
+		s1.addParam('flashvars','file=video/video1.flv');
+		s1.write('test2');
+	</script>
+	
+	
+	</body>
+</html>

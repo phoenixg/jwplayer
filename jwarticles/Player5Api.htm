@@ -1,0 +1,411 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  
+  
+
+  
+
+
+  
+
+  
+    <title>
+      Player5Api –
+      JW Player – Trac
+    </title>
+        <link rel="search" 
+href="http://developer.longtailvideo.com/trac/search">
+        <link rel="help" 
+href="http://developer.longtailvideo.com/trac/wiki/TracGuide">
+        <link rel="alternate" 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Api?format=txt"
+ type="text/x-trac-wiki" title="Plain Text">
+        <link rel="up" 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Api" 
+title="View Latest Version">
+        <link rel="start" 
+href="http://developer.longtailvideo.com/trac/wiki">
+        <link rel="stylesheet" href="Player5Api_files/trac.css" 
+type="text/css"><link rel="stylesheet" href="Player5Api_files/wiki.css" 
+type="text/css">
+        <link rel="shortcut icon" 
+href="http://www.longtailvideo.com/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="http://www.longtailvideo.com/favicon.ico"
+ type="image/x-icon">
+      <link type="application/opensearchdescription+xml" rel="search" 
+href="http://developer.longtailvideo.com/trac/search/opensearch" 
+title="Search JW Player">
+    <script type="text/javascript" src="Player5Api_files/jquery.js"></script><script type="text/javascript" src="Player5Api_files/trac.js"></script><script type="text/javascript" src="Player5Api_files/search.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/trac/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor("Link to this section");
+      });
+    </script>
+    <link rel="stylesheet" type="text/css" 
+href="Player5Api_files/style.css">
+    <script type="text/javascript" src="Player5Api_files/swfobject.js"></script>
+  </head><body>
+	<!--
+	<div id="crosslinks">
+		Other product management sites: 
+		<a href="http://trac.longtailvideo.com/trac">Website/Adsolution</a>  | 
+		<a href="https://code.bitsontherun.com/trac">Bits on the Run</a> | 
+		<a href="http://ova.longtailvideo.com/trac">Open Video Ads</a> 
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			if($.trim($('#metanav').text()).substr(0,9) == 'logged in') { 
+				$('#crosslinks').css('display','block');
+			}
+		});
+	</script>
+	-->
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://developer.longtailvideo.com/trac"><img
+ src="Player5Api_files/logo.gif" alt=""></a>
+      </div>
+      <form id="search" action="/trac/search" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input id="proj-search" name="q" size="18" type="text">
+          <input value="Search" type="submit">
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="last first"><a 
+href="http://developer.longtailvideo.com/trac/login">Login</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a 
+href="http://developer.longtailvideo.com/trac/wiki">Wiki</a></li><li><a 
+href="http://developer.longtailvideo.com/trac/roadmap">Roadmap</a></li><li><a
+ href="http://developer.longtailvideo.com/trac/timeline">Timeline</a></li><li><a
+ href="http://developer.longtailvideo.com/trac/browser">Source Code</a></li><li><a
+ href="http://developer.longtailvideo.com/trac/report/3">Tickets</a></li><li
+ class="last"><a href="http://developer.longtailvideo.com/trac/testing">Testing</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+            <li class="first "><a 
+href="http://developer.longtailvideo.com/trac/wiki/WikiStart">Start Page</a></li><li><a
+ href="http://developer.longtailvideo.com/trac/wiki/TitleIndex">Index</a></li><li><a
+ 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Api?action=history">History</a></li><li
+ class="last"><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Api?action=diff&amp;version=9">Last
+ Change</a></li>
+          </ul>
+        <hr>
+      </div>
+    <div id="content" class="wiki">
+      <div class="wikipage searchable">
+        
+          <p>
+</p><div class="wiki-toc">
+                <h4>JW Player 5 for Flash</h4>
+                <ol>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/WikiStart">Overview</a></li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5FlashVars">All
+ Flashvars</a></li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Formats">Supported
+ Formats</a></li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/FlashSecurity">Crossdomain
+ Security</a><br>&nbsp;</li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Api">API Calls</a></li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Events">Events
+ Overview</a><br>&nbsp;</li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Skinning">All 
+Skin Elements</a><br>&nbsp;</li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5PluginsBuilding">Building
+ Plugins</a></li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5PluginsCompiling">Compiling
+ Plugins</a><br>&nbsp;</li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player4WikiStart">Version
+ 4.x Documentation</a></li>
+                </ol>
+                </div>
+
+<h1 id="JWPlayer:ActionScriptAPICalls">JW Player: ActionScript API 调用<a
+ title="Link to this section" href="#JWPlayer:ActionScriptAPICalls" 
+class="anchor"> ¶</a></h1>
+<p>
+JW Player 5 为 <a class="wiki" 
+href="http://developer.longtailvideo.com/trac/wiki/Player5PluginsBuilding">插件</a>提供了相当灵活的 API,
+ 可以内置进 <a class="ext-link" 
+href="http://en.wikipedia.org/wiki/ActionScript"><span class="icon">actionscript</span></a>).
+ 可以读取播放器的配置/播放列表变量, 
+调用播放器的函数, 监听 <a class="wiki" 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Events">Flash 
+事件</a>. 需要一个小的初始化过程来建立你的app和播放器之间的连接.</p>
+<p>
+版本 5 还支持插件，<a class="wiki" 
+href="http://developer.longtailvideo.com/trac/wiki/Player4Api">播放器的版本4</a>还支持 <a class="ext-link" 
+href="http://en.wikipedia.org/wiki/JavaScript"><span class="icon">javascript</span></a>
+ ,尽管有些功能没法使用了.</p>
+<h2 id="Initialization">初始化<a title="Link to this section" 
+href="#Initialization" class="anchor"> ¶</a></h2>
+<p>
+ 
+</p>
+<h3 id="Javascript">Javascript<a title="Link to this section" 
+href="#Javascript" class="anchor"> ¶</a></h3>
+<p>
+请注意，播放器不能在你页面加载的时候，以及第一个Javascript执行的时候起作用; SWF 文件 (~70k)
+ 需要首先被加载和初始化. 你可以通过定义一个简单的 javascript 函数，然后让你的播放器使用<a class="wiki" 
+href="http://developer.longtailvideo.com/trac/wiki/Player5FlashVars#Behavior">playerready
+ flashvar</a>调用这个函数，从而避免这个问题. 当播放器成功初始化时,它会调用你在flashvar中指定的 javascript 函数.这个回调所传递的对象包含播放器的 <i>id</i>, <i>version</i> 和 <i>client</i>, 它们允许你订阅事件, 调用播放器的函数, 等等.使用 <i>id</i> 变量为自己的播放器创建一个映射（reference）. 比如:</p>
+<pre class="wiki">// "playerready" flashvar was set to "playerReadyCallback"
+
+var player;
+function playerReadyCallback(obj) {
+	alert('the videoplayer '+obj['id']+' has been instantiated');
+	player = document.getElementById(obj['id']);
+};
+</pre>
+<p>
+要是你对页面加载时调用播放器不感兴趣, 那么你就不需要这个函数. 这时你可以简单地使用embed/object 标签的 ID，来嵌入播放器，得到一个映射. 一个简单的 getElementById() 函数就能实现这个效果,让他得以调用.
+ 该函数需要 object/embed 标签的 ID作为映射. 用嵌入标签的例子如下:</p>
+<pre class="wiki">&lt;embed id="myplayer" name="myplayer" src="/upload/player.swf" width="400" height="200" /&gt;
+</pre>
+<p>
+你可以得到一个指向播放器的指针，用下面的代码:</p>
+<pre class="wiki">var player = document.getElementById('myplayer');
+</pre>
+<p>
+<strong>注意，你必须在&lt;embed&gt;标签里加上id和name的两个属性，从而让所有浏览器都能反馈一个ID.</strong></p>
+<h3 id="Plugins">插件<a title="Link to this section" href="#Plugins" 
+class="anchor"> ¶</a></h3>
+<p>
+所有插件必须定义一个称为 <i>initPlugin(player, 
+config)</i>的函数.该函数会在播放器<a 
+class="wiki" 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Startup">初始化</a>时被调用.
+ 一个 <a class="source" 
+href="http://developer.longtailvideo.com/trac/browser/trunk/fl5/src/com/longtailvideo/jwplayer/player/IPlayer.as">播放器</a>
+ 的引用被传递给这个函数, 这样插件就可以立即读取配置/播放列表,调用播放器的函数,指派事件监听者.一个 <a
+ class="source" 
+href="http://developer.longtailvideo.com/trac/browser/trunk/fl5/src/com/longtailvideo/jwplayer/plugin/PluginConfig.as">PluginConfig</a>
+ 对像, 包含有专业插件定制的配置参数, 也被作为参数传递给 <i>initPlugin</i>.</p>
+<p>
+插件还需要让一个 <i>resize(width, height)</i> 函数以及一个 <i>id</i> 获取器生效.</p>
+<pre class="wiki">import com.longtailvideo.jwplayer.player.IPlayer;
+import com.longtailvideo.jwplayer.plugins.PluginConfig;
+
+public class MyPlugin extends Sprite implements IPlugin {
+
+	private static var myID:String = "myplugin";
+
+	private var api:IPlayer;
+	private var config:PluginConfig;
+
+	public function initPlugin(player:IPlayer, conf:PluginConfig):void {	
+		this.api = player;
+		this.config = conf;
+	}
+
+	public function get id():String {	
+		return myID;
+	}
+
+	public function resize(width:Number, height:Number):void {	
+		// Implement resizing if necessary
+	}
+}
+</pre>
+<p>
+你需要包括 <a class="source" 
+href="http://developer.longtailvideo.com/trac/browser/trunk/fl5/src/com/longtailvideo/jwplayer/player">com.longtailvideo.jwplayer.player
+ package</a> 在你的插件项目中，从而避免兼容问题.
+</p>
+<h2 id="Readingvariables">阅读变量<a title="Link to this 
+section" href="#Readingvariables" class="anchor"> ¶</a></h2>
+<p>
+你可以用播放器API调用三个变量:</p>
+<ul>
+<li><strong>config</strong> 返回一个 <a class="source" 
+href="http://developer.longtailvideo.com/trac/browser/trunk/fl5/src/com/longtailvideo/jwplayer/model/PlayerConfig.as">PlayerConfig</a>
+ 对象， 所有变量 (<a class="wiki" 
+href="http://developer.longtailvideo.com/trac/wiki/Player5FlashVars">Player5FlashVars</a>)
+ 都会加载进播放器.
+</li>
+<li><strong>playlist</strong> 返回一个 <a class="source" 
+href="http://developer.longtailvideo.com/trac/browser/trunk/fl5/src/com/longtailvideo/jwplayer/model/Playlist.as">Playlist</a>
+ ，包含播放列表的所有条目. 对于单一文件而言,该列表实际上只有一个条目.  <strong>playlist</strong>
+ 中的每个条目也是一个对象，有 <i>file</i>, <i>type</i>, <i>duration</i> 等等.
+ <a class="wiki" 
+href="http://developer.longtailvideo.com/trac/wiki/FlashVars#Fileproperties">property</a>.</li>
+<li><strong>config.pluginConfig(name)</strong> 返回一个对象，包含特定插件相应的所有flashvars (比如内置的
+ <i>controlbar</i>或外部加载的 <i>yousearch</i>). 
+除此之外, 每个插件配置会包含一个 <i>x</i>, <i>y</i>, <i>width</i>,<i>height</i>
+ 和 <i>visible</i> 变量 ,附属到其位置.
+</li>
+</ul><h3 id="Javascript1">Javascript<a title="Link to this section"
+ href="#Javascript1" class="anchor"> ¶</a></h3>
+<p>
+参见 <a class="wiki" 
+href="http://developer.longtailvideo.com/trac/wiki/Player4Api#Readingvariables">Player
+ 4 Api 文档</a> 以得到Javascript的支持.
+</p>
+<h3 id="Plugins1">插件<a title="Link to this section" 
+href="#Plugins1" class="anchor"> ¶</a></h3>
+<p>
+下面是对播放器的三个调用，演示了如何从播放器API读取变量</p>
+<pre class="wiki">// See what the repeat flashvar was configured to
+var repeat:String = player.config.repeat
+// The title of the second playlist item
+var title:String = player.playlist.getItemAt(1).title;
+// The current width of the controlbar
+var barWidth:Number = player.pluginConfig('controlbar')['width'];
+</pre>
+<h2 id="Playercommands">播放器命令<a title="Link to this 
+section" href="#Playercommands" class="anchor"> ¶</a></h2>
+<h3 id="Javascript2">Javascript<a title="Link to this section" 
+href="#Javascript2" class="anchor"> ¶</a></h3>
+<p>参见 <a class="wiki" 
+href="http://developer.longtailvideo.com/trac/wiki/Player4Api#Readingvariables">Player
+ 4 Api 文档</a> 以得到Javascript的支持. </p>
+<h3 id="Plugins2">插件<a title="Link to this section" 
+href="#Plugins2" class="anchor"> ¶</a></h3>
+<p>
+ ActionScript API 提供了以下几个播放器命令:</p>
+<ul><li>fullscreen(state:Boolean)
+</li><li>load(item:*)
+</li><li>mute(state:Boolean)
+</li><li>pause()
+</li><li>play()
+</li><li>playlistItem(i:Number)
+</li><li>playlistNext()
+</li><li>playlistPrev()
+</li><li>redraw()
+</li><li>seek(pos:Number)
+</li><li>stop()
+</li><li>volume(vol:Number)
+</li></ul>
+<p>
+下面是如何调用这些函数的例子:
+ 
+</p>
+<pre class="wiki">// Mute the player
+player.mute(true);
+// Load a new video into the player
+player.load("http://www.mysite.com/mycoolvideo.mp4");
+</pre>
+<h2 id="Settinglisteners">设置监听器<a title="Link to this 
+section" href="#Settinglisteners" class="anchor"> ¶</a></h2>
+<h3 id="Javascript3">Javascript<a title="Link to this section" 
+href="#Javascript3" class="anchor"> ¶</a></h3>
+<p>参见 <a class="wiki" 
+href="http://developer.longtailvideo.com/trac/wiki/Player4Api#Readingvariables">Player
+ 4 Api 文档</a> 以得到Javascript的支持. </p>
+<h3 id="Plugins3">插件<a title="Link to this section" 
+href="#Plugins3" class="anchor"> ¶</a></h3>
+<p>任何在<a class="wiki" 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Events">播放器事件</a> 页面提到的事件都可以使用flash 事件模块来监听.  要监听一个播放器事件, 只需在播放器API简单地调用 <i>addEventListener()</i> 
+即可.</p>
+<p>举例:</p>
+<pre class="wiki">private function muteTracker(evt:MediaEvent) { 
+    trace('the new mute state is: '+evt.mute); 
+}
+
+player.addEventListener(MediaEvent.JWPLAYER_MEDIA_MUTE, muteTracker);
+</pre>
+<p>一个移除调用的例子:
+</p>
+<pre class="wiki">player.removeEventListener(MediaEvent.JWPLAYER_MEDIA_MUTE, muteTracker);
+</pre>
+<p>
+注意，你必须包括 <a class="source" 
+href="http://developer.longtailvideo.com/trac/browser/trunk/fl5/src/com/longtailvideo/jwplayer/events">com.longtailvideo.jwplayer.events
+ package</a> 在你的插件工程中，从而避免兼容问题.</p>
+<h3 id="PlayerControls">播放器控制<a title="Link to this section" 
+href="#PlayerControls" class="anchor"> ¶</a></h3>
+<p>
+播放器内置了几个用户控制, 它们有各自独立的
+ APIs.  例如:
+</p>
+<ul>
+<li><strong>controlbar</strong> 提供了一个 <i>addButton()</i> 
+调用, 可以用它在控制条上插入自定义的按钮.
+</li>
+<li><strong>dock</strong> 提供了一个 <i>addButton()</i> 调用, 
+可以用它在dock上插入一个自定义的按钮.</li>
+</ul>
+<p>
+下面是一个在dock和控制条上插入一个按钮的例子:</p>
+<pre class="wiki">var api:IPlayer;
+var icon:DisplayObject;
+
+function clickHandler(evt:MouseEvent):void { 
+	trace('Demo button clicked!');
+}
+
+function initPlugin(player:IPlayer, conf:PluginConfig):void {
+    api = player;
+    if(api.config.dock) { 
+        api.controls.dock.addButton(icon, "Click here", clickHandler);
+    } else {
+        api.controls.controlbar.addButton(icon, "Click here", clickHandler);
+    }
+}
+</pre>
+        
+        
+      </div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Api?format=txt">Plain
+ Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" xml:lang="en" lang="en"><hr>
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img 
+src="Player5Api_files/trac_logo_mini.png" alt="Trac Powered" height="30"
+ width="107"></a>
+      <p class="left">
+        Powered by <a 
+href="http://developer.longtailvideo.com/trac/about"><strong>Trac 0.11</strong></a><br>
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.
+      </p>
+      <p class="right">Visit the Trac open source project at<br><a 
+href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script><script src="Player5Api_files/ga.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-4011032-5");
+			pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
+</body></html>

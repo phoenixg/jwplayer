@@ -1,0 +1,474 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN"><head>
+
+
+<title>SWFObject: 基于Javascript的Flash媒体版本检测与嵌入模块(中文)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Description" content="使用SWFObject为HTML嵌入Flash">
+<meta name="Keywords" content="swfobject,swfobject教程,swfobject.js下载">
+	<style type="text/css" media="screen">
+		#content { font-size:14px; padding:0 20px; width:80%;}
+		small {font-size:12px;}
+		em {font-style:normal;}
+		pre code {
+		display: block;
+		margin: 5px 15px;
+		padding-left: .5em;
+		border-left: solid 1px #ccc;
+		}
+		a {color:#06f;}
+		a:hover {color:#f00;}
+		.note 
+		{
+			border: solid 1px #457AA5;
+			background-color: #eee;
+			padding: 4px;
+		}	
+	</style>
+</head><body>
+<div id="content">
+	 <h1>SWFObject: 基于Javascript的Flash媒体版本检测与嵌入模块</h1>
+	 <small>原文：<a href="http://blog.deconcept.com/swfobject" title="SWF 
+Object">SWFObject: Javascript Flash Player detection and embed script</a>
+	 <br>翻译：<a href="http://www.awflasher.com/blog/" title="aw's blog - 
+Chinese blog focus on RIA and Web">Awflasher.com</a>
+	 <br>汉化地址：<a href="http://www.awflasher.com/flash/articles/swfobj.htm" 
+title="SWF Object, 在页面中嵌入Flash媒体（*.swf文件）">http://www.awflasher.com/flash/articles/swfobj.htm</a>
+ - 更新到SWFObject 1.5官方文档(Updated to 1.5 @ 070318)
+	 </small>
+	<div class="storycontent">
+		<p class="note">SWFObject是一个用于在HTML中方面插入Adobe 
+Flash媒体资源（*.swf文件）的独立、敏捷的JavaScript模块。该模块中的JavaScript脚本能够自动检测PC、Mac机器上各种
+主流浏览器对Flash插件的支持情况。它使得插入Flash媒体资源尽量简捷、安全。而且它是非常符合搜索引擎优化的原则的。此外，它能够避免您的
+HTML、XHTML中出现object、embed等非标准标签，从而符合更加标准。
+<br><small>（即：通过text/html应答页面， <em>而非</em>application/xhtml+xml）</small></p>
+
+		<p class="note"><span style="color: rgb(221, 0, 0);">请注意:</span>
+由于法律原因，FlashObject已经更名为SWFObject，详见<a 
+href="http://blog.deconcept.com/2006/04/21/flashobject-to-become-swfobject/">这
+里</a>。</p>
+
+
+
+
+		<p>内容导读</p>
+		<ul>
+		   <li><a href="#whatsnew">新功能</a></li>
+			<li><a href="#howitworks">实现原理</a></li>
+			<li><a href="#examples">SWFObject范例</a></li>
+			<li><a href="#expressinstall">在SWFObject中应用ExpressInstall</a></li>
+			<li><a href="#download">下载</a></li>
+			<li><a href="#whyitsbetter">独特优势</a></li>
+			<li><a href="#faq">常见问题</a></li>
+		</ul>
+
+		<h1><a name="whatsnew"></a>新功能</h1>
+
+		<p>详细的更新记录可以在<a 
+href="http://blog.deconcept.com/2007/02/28/swfobject-1-5-released/">SWFObject
+ 1.5 blog post</a>这里找到。</p>
+		
+		<h1><a name="howitworks"></a>实现原理</h1>
+		<p>[对于急切需要下载的用户<a 
+href="http://blog.deconcept.com/swfobject/swfobject_source.js">点击这里直接观看
+JS代码</a>]</p>
+		<p>SWFObject的使用是非常简单的，只需要包含 <code>swfobject.js</code>这个js文件，然后在DOM中插入一
+些简单的JS代码，就能嵌入Flash媒体资源了。
+		下面是一个最简单的范例：</p>
+		<pre><code>&lt;script type="text/javascript" src="swfobject.js"&gt;&lt;/script&gt;
+		
+&lt;div id="flashcontent"&gt;
+  This text is replaced by the Flash movie.
+&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;
+   var so = new SWFObject("movie.swf", "mymovie", "200", "100", "7", "#336699");
+   so.write("flashcontent");
+&lt;/script&gt;</code></pre>
+		<p>让我们看看这些代码是如何工作的</p>
+
+	  <pre><code>&lt;div id="flashcontent"&gt;[...]&lt;/div&gt;</code></pre>
+	  
+	  <p>首先，我们要为SWF资源预留一个HTML结点。这个HTML结点内的所有内容都会在客户端被Flash资源替换，当客户端没有安装
+Flash播放器的时候，这些内容会显示出来。这一特色在SEO以及对用户体验方面非常有必要。</p>
+	  
+	  <pre><code>var so = new SWFObject(swf, id, width, height, version, background-color [, quality, xiRedirectUrl, redirectUrl, detectKey]);</code></pre>
+	  
+	  <p>创建一个新的SWFObject实例，并且传入一下参数:</p>
+	  
+	  <ul>
+		 <li>swf - SWF文件路径</li>
+		 <li>id - 您为这个SWF文件分配的id值，它将用于给embed与object标签设定name属性，以便于可以支持<code>swliveconnect</code>的
+功能，如动态传入变量</li>
+		 <li>width - 宽度</li>
+		 <li>height - 高度</li>
+		 <li>version - FlashPlayer需要的版本号，它可以详细到 '主版本号.小版本号.细节'，例如：<code>"6.0.65"</code>。
+一般地，我们只需传入主版本即可，例如：<code>"6"</code>。</li>
+		 <li>background-color - Flash资源的背景色，16进制格式</li>
+	  </ul>
+	  
+	  <p>此外，还有如下可选参数:</p>
+		 <ul>
+			<li>quality - 画面质量，默认为<code>"high"</code>。</li>
+			<li>xiRedirectUrl - 详见ExpressInstall相关</li>
+			<li>redirectUrl - 没有安装相应版本的播放器后自动跳转的目标地址</li>
+			<li>detectKey - 
+这是当忽略检测时，SWFObject将去url地址中查找的变量，默认值为“detectflash”，后续有详细介绍</li>
+		 </ul>
+
+	  <pre><code>so.write("flashcontent");</code></pre>
+	  
+	  <p>将Flash资源应用到DOM里，在浏览器显示出来。</p>
+
+	  <h3>细节</h3>
+		
+		<p>SWFObject
+的灵活性非常好。您完全可以事先写好HTML的其他部分，最后再回过头来添加Flash内容。这样可以确保在客户端没有Flash的情况下，用户不会一无
+所获；也可以确保针对搜索引擎，做了什么样的关键词优化。您完全不用像以前那样担心客户端的各种状况</p>
+		
+		<p>SWFObject兼容当前各种主流浏览器，如：PC上的IE5/5.5/6, Netscape 7/8,Firefox, 
+Mozilla, and Opera。Mac上的IE5.2, Safari, Firefox, Netscape
+6/7, Mozilla, and Opera 7.5+，各种浏览器的后续版本也会继续支持</p>
+		
+		<p>SWFObject检测Flash播放器版本从3开始到最新的版本号，而且也消灭了IE中“激活”的麻烦。这里有<a 
+href="http://blog.deconcept.com/2005/12/15/internet-explorer-eolas-changes-and-the-flash-plugin/">相
+关背景</a>。</p>
+
+		<p>SWFObject可以方便地检查版本细节，例如我们需要v.6.0 r65 (or 6,0,65,0) 
+来处理SWF资源，就可以添加如下代码:</p>
+
+   <pre><code>var so = new SWFObject("movie.swf", "mymovie", "200", "100", "6.0.65", "#336699");</code></pre>
+   
+   <p>SWFObject的版本检测可以人工忽略。如果在特定环境下您不希望SWFObject检测版本号，那么只需要传递一个参数在HTML页面
+中，就可以了。SWFObject可以捕获这个参数并且跳过检测，直接写入Flash嵌入代码到DOM中。用于忽略版本检测的变量名是
+“detectflash”，以下是一个例子：</p>
+   
+   <pre><code>&lt;a href="mypage.html?detectflash=false"&gt;Bypass link&lt;/a&gt;</code></pre>
+
+	<h1><a name="examples"></a>SWFObject 范例</h1>
+	<p>以上我们接触到的范例都最基础的，接下来我们列举一些其他功能，尤其是传入参数、变量这些使用频率较高的行为。</p>
+
+		<h3>传入Flash内联参数的简单范例</h3>
+		
+		<pre><code>&lt;script type="text/javascript"&gt;
+   var so = new SWFObject("movie.swf", "mymovie", "200", "100%", "7", "#336699");
+   so.addParam("quality", "low");
+   so.addParam("wmode", "transparent");
+   so.addParam("salign", "t");
+   so.write("flashcontent");
+&lt;/script&gt;</code></pre>
+
+	<p>这里可以看到Flash支持的内联参数列表：<a 
+href="http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_12701" 
+rel="external">full list of the current parameters and their possible 
+values</a>（adobe.com官方资源）</p>
+
+	<h3>采用"Flashvars"参数传入变量</h3>
+	
+	<p>用Flashvars是在预加载Flash时传入数据的最佳做法，语法格式与GET变量串非常类似，如：<code>variable1=value1&amp;variable2=value2&amp;variable3=value3</code>SWFObject
+帮助您将这项工作变得更加明确化</p>
+	   
+	<pre><code>&lt;script type="text/javascript"&gt;
+   var so = new SWFObject("movie.swf", "mymovie", "200", "100", "7", "#336699");
+   so.addVariable("variable1", "value1");
+   so.addVariable("variable2", "value2");
+   so.addVariable("variable3", "value3");
+   so.write("flashcontent");
+&lt;/script&gt;</code></pre>
+	
+	<p>这些变量将会保存在<code>_root</code>这个MovieClip对象里。</p>
+	
+	<p>SWFObject还可以方便地直接从URL中接受参数传入Flash中，例如你有这样一个URL：<code>http://www.example.com/page.html?variable1=value1&amp;variable2=value2</code>。
+采用<code>getQueryParamValue()</code>方法你就可以轻松获取这些参数，并将它们传入Flash，例如：</p><p>
+
+	</p><pre><code>&lt;script type="text/javascript"&gt;
+   var so = new SWFObject("movie.swf", "mymovie", "200", "100", "7", "#336699");
+   so.addVariable("variable1", getQueryParamValue("variable1"));
+   so.addVariable("variable2", getQueryParamValue("variable2"));
+   so.write("flashcontent");
+&lt;/script&gt;</code></pre>
+
+   <p><code>getQueryParamValue()</code>方法同样可以获取JavaScript的Location对象的
+hash值“<code>location.hash</code>”来与swf内部进行通信。这里是一个采用SWFObject的应用程序，其中用到了<code>location.hash</code>对
+象：<a href="http://www.slideshowpro.net/demo/demo_default.php" 
+rel="external">链接地址</a></p>
+
+   <h1><a name="expressinstall"></a>在SWFObject中应用Express 
+Install（利用官方自动升级接口）</h1>
+
+   <p>SWFObject全面支持AdobeFlash播放器的自动升级功能(从6.0.65起的FlashPlayer支持在swf内部自动升
+级!)，这样用户完全不用离开您的网页就能完成播放器的升级了。</p>
+
+   <p>首先，上传官方的expressinstall.swf到您的服务器上，然后使用<code>useExpressInstall</code>方
+法指定这个swf文件的地址就可以了，例如：</p>
+
+	<pre><code>&lt;script type="text/javascript"&gt;
+	   var so = new SWFObject("movie.swf", "mymovie", "200", "100", "8", "#336699");
+	   so.useExpressInstall('expressinstall.swf');
+	   so.write("flashcontent");
+	&lt;/script&gt;</code></pre>
+
+
+<p>您可以安装一个低版本的Flash播放器然后访问<a 
+href="http://blog.deconcept.com/swfobject/expressinstall.html">这个页面</a>看
+到效果</p>
+
+<p>在SWFObject原文件压缩包中您可以找到具体的使用细节，您可以自己定制ExpressInstall的流程。</p>
+
+<p>如果您的Flash影片在弹出窗口中，或者您希望用户在完成了ExpressInstall后重定向到其他地址，你可以采用<code>xiRedirectUrl</code>属
+性，来自动完成这一步骤。例如：</p>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+   var so = new SWFObject("movie.swf", "mymovie", "200", "100", "8", "#336699");
+   so.useExpressInstall('expressinstall.swf');
+   so.setAttribute('xiRedirectUrl', 'http://www.example.com/upgradefinished.html'); // must be the absolute URL to your site
+   so.write("flashcontent");
+&lt;/script&gt;</code></pre>
+
+	<div class="note">
+		<h1><a name="download"></a>下载</h1>
+
+	  <p>SWFObject基于<a 
+href="http://www.opensource.org/licenses/mit-license.php" rel="external">MIT
+ License</a>，您可以免费任意使用。</p>
+
+		<p><a href="http://blog.deconcept.com/swfobject/swfobject.zip">下载 
+SWFObject 1.5</a> - Zip 文件, 包含 swfobject.js 和其他范例。</p>
+		
+		<p>更多链接：</p>
+		<ul>
+			<li><a href="http://blog.deconcept.com/swfobject/swfobject.html">标准
+Flash嵌入</a> - 符合XHTML 1.0 Strict.*</li>
+			<li><a href="http://blog.deconcept.com/swfobject/fullpage.html">全屏
+Flash嵌入</a> - 符合XHTML 1.0 Strict.*</li>
+			<li><a href="http://blog.deconcept.com/swfobject/expressinstall.html">含Express
+ Install的标准Flash嵌入</a> - 从6.0.65起的FlashPlayer才支持此功能</li>
+		</ul>
+
+		<p><small>* 页面全部是 text/html格式，<em>不是</em> application/xhtml+xml.</small></p>
+		
+		<p>更多问题可以访问我们的论坛：<a href="http://blog.deconcept.com/swfobject/forum/">SWFObject
+论坛!</a></p>
+</div>
+
+	<h1><a name="whyitsbetter"></a>独特优势</h1>
+		 <p>
+多年以来，各种各样的Flash播放器版本检测代码层出不穷，包括嵌入脚本也有许多。我们在这一部分针对流行的几种方法进行一个比较。</p>
+		 <h3>1) Adobe官方做法</h3>
+		   <p>
+这就是经典的Object标签和Embed标签配合做法，也是目前最常用的做法：
+</p>
+
+		   <pre><code>&lt;object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" 
+   codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" 
+   width="550" height="400" id="Untitled-1" align="middle"&gt;
+&lt;param name="allowScriptAccess" value="sameDomain" /&gt;
+&lt;param name="movie" value="mymovie.swf" /&gt;
+&lt;param name="quality" value="high" /&gt;
+&lt;param name="bgcolor" value="#ffffff" /&gt;
+&lt;embed src="mymovie.swf" quality="high" bgcolor="#ffffff" width="550" 
+   height="400" name="mymovie" align="middle" allowScriptAccess="sameDomain" 
+   type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" /&gt;
+&lt;/object&gt;</code></pre>
+
+				<p>虽然是目前最常用的方法，但仍然有一些问题。</p>
+
+				<ul>
+				   <li><em>缺乏播放器版本检测</em>
+没有播放器插件版本检测，用户会获得非常糟糕的体验，他们会在不知情的情况下看到ActiveX插件安装入口，这样会导致大部分用户离开。而且，用低版本
+播放器播放高版本的swf文件，会导致更多潜在问题，而用户会将一切问题归咎于您的产品</li>
+					<li>Eolas专利纠纷导致IE的近期发行版中需要进行一次“激活”点击才可以完成和Flash内容的交互。<a 
+href="http://blog.deconcept.com/2005/12/15/internet-explorer-eolas-changes-and-the-flash-plugin/">详
+细内容</a></li>   
+				<li><em>不符合XHTML规范</em> - 在HTML和XHTML中都没有<code>embed</code>标签HTML or
+ XHTML。因为<code>object</code>标签在不同浏览器中的诡异表现，我们不得不用embed标签来完善最终效果。</li>
+				</ul>
+
+				<h3>2) 仅采用Object标签 / Flash satay</h3>
+
+			  <p>这种方法在2002年的<a 
+href="http://www.alistapart.com/articles/flashsatay/" rel="external">A 
+List Apart article</a>出现之后开始大面积流行，这里有两个例子：</p>
+
+			  <p>'仅含Object标签'</p>
+			  <pre><code>&lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+   codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"
+   width="300" height="120"&gt;
+ &lt;param name="movie" value="http://www.macromedia.com/shockwave/download/triggerpages_mmcom/flash.swf"&gt; 
+ &lt;param name="quality" value="high"&gt;
+ &lt;param name="bgcolor" value="#FFFFFF"&gt;
+ &lt;!--[if !IE]&gt; &lt;--&gt;
+ &lt;object data="http://www.macromedia.com/shockwave/download/triggerpages_mmcom/flash.swf"
+		 width="300" height="120" type="application/x-shockwave-flash"&gt;
+  &lt;param name="quality" value="high"&gt;
+  &lt;param name="bgcolor" value="#FFFFFF"&gt;
+  &lt;param name="pluginurl" value="http://www.adobe.com/go/getflashplayer"&gt;
+  FAIL (the browser should render some flash content, not this).
+ &lt;/object&gt;
+ &lt;!--&gt; &lt;![endif]--&gt;
+&lt;/object&gt;</code></pre>
+
+	  <p>Flash satay</p>
+	  <pre><code>&lt;object type="application/x-shockwave-flash
+data="c.swf?path=movie.swf" 
+width="400" height="300"&gt;
+&lt;param name="movie" 
+value="c.swf?path=movie.swf" /&gt;
+&lt;img src="noflash.gif" 
+width="200" height="100" alt="" /&gt;
+&lt;/object&gt;</code></pre>
+
+	<ul>
+		<li><em>可用性问题</em> - 采用 Flash Satay 的话， <a 
+href="http://weblogs.macromedia.com/accessibility/archives/2005/08/in_search_of_a.cfm"
+ rel="external">一些屏幕阅读器会忽略swf内容</a>.</li>
+		<li>Eolas专利纠纷导致IE的近期发行版中需要进行一次“激活”点击才可以完成和Flash内容的交互。<a 
+href="http://blog.deconcept.com/2005/12/15/internet-explorer-eolas-changes-and-the-flash-plugin/">详
+细内容</a></li> 
+	   <li><em>缺乏播放器版本检测</em>
+没有播放器插件版本检测，用户会获得非常糟糕的体验，他们会在不知情的情况下看到ActiveX插件安装入口，这样会导致大部分用户离开。而且，用低版本
+播放器播放高版本的swf文件，会导致更多潜在问题，而用户会将一切问题归咎于您的产品</li>  
+	   <li><em>早期的的Safari会忽略<code>param</code>标签</em> - 在这些版本：2.0 (Tiger) 
+或者 1.3 (Panther) 或者可能 1.2.8 (前Panther) 之前，Safari 完全忽略<code>param</code>
+标签。这将会让你的Flashvars等参数无法传入。</li>
+	</ul>
+
+	  <h3>3) 'small flash movie on the index page' 检测方法</h3>
+
+	  <p>这个方法会通过在首页放一个swf文件去访问<code>$version</code> 变量来返回版本信息。</p>
+
+	  <p>问题在于：</p>
+
+	  <ul>
+		 <li><em>内页无检测</em> - 内页如果不放着这个swf就无法检测</li>
+		<li>“激活”问题</li>
+		 <li><em>不符合HTML或者XHTML规范</em></li>
+		 <li><em>影响搜索引擎索引排名</em></li>
+	  </ul>
+
+	  <h3>4) <a 
+href="http://www.adobe.com/software/flashplayer/download/detection_kit/"
+ rel="external">Adobe官方 Flash Player Detection 模块</a></h3>
+
+	  <p>Adobe官方这个模块非常不错，然而仍然有一些不足，它采用两种方法来检测</p>
+	  <ol>
+		 <li><em>Flash自身检测，如上面提到的"small Flash movie on the index page"</em> - 
+缺点已经提过了</li>
+		 <li><em>Javascript</em> - 混乱的代码让你的HTML变得非常难以维护</li>
+	  </ol>
+
+	  <p>深入讨论在<a 
+href="http://blog.deconcept.com/2005/08/08/new-macromedia-flash-player-detection-kit/">这
+里</a>。</p>
+
+	  <h3>5) 用纯粹的JS来检测、嵌入</h3>
+	  
+	  <p>这种方法看起来不错，但是仍然缺乏规范，而且消耗开发成本</p>
+	  
+	  <ul>
+		 <li><em>检测不够完善</em>
+- 通常只能检测到当前的Flash播放器发行版，而且升级也需要手工参与</li>
+		 <li><em>增加了 <em>更多</em> 代码</em>
+- 难以维护的DOM结构</li>
+		 <li><em>解决方案太笨重</em>
+- SWFObject进行了多次优化，非常轻量</li>
+	  </ul>
+
+	   <h1><a name="faq"></a>常见问题</h1>
+	
+		<p><a href="http://blog.deconcept.com/swfobject/forum/">这里进入论坛可以与其他用户交
+流</a></p>
+		  <div class="faq">
+			  <dl>
+				 <dt><strong>问.</strong> 到底什么是 '<a 
+href="http://blog.deconcept.com/2005/12/15/internet-explorer-eolas-changes-and-the-flash-plugin/">IE
+的激活内容升级</a>' 我听说过这件事情，SWFObject能应对它么？</dt>
+				 <dd><strong>答.</strong>
+可以，更多详细信息可以看：<a 
+href="http://blog.deconcept.com/2005/12/15/internet-explorer-eolas-changes-and-the-flash-plugin/">这
+里</a>。</dd>
+		 	</dl>
+		  <dl>
+			 <dt><strong>问.</strong> 在Flash资源加载前，相关区域的内容会有闪烁(仅IE有)</dt>
+			 <dd><strong>答.</strong> 这与 <a 
+href="http://www.bluerobot.com/web/css/fouc.asp" rel="external">FOUC</a>
+ bug有关。</dd>
+
+			 </dl>
+			<dl>
+				 <dt><strong>问.</strong> 用 SWFObject 嵌入多个SWF该怎么做?</dt>
+				 <dd><strong>答.</strong> 只要给每一个HTML结点唯一的id就可以了。</dd>
+			  </dl>
+
+		 <dl>
+			 <dt><strong>问.</strong> 如何使SWFObject兼容Netscape 4.x?</dt>
+			 <dd><strong>答.</strong> <a 
+href="http://blog.deconcept.com/2005/03/31/proper-flash-embedding-flashobject-best-practices/#comment-3458">这
+条评论</a>包含相关信息。</dd>
+		  </dl>
+		  	 <dl>
+			 <dt><strong>问.</strong> 我如何在blog中使用SWFObject?</dt>
+			 <dd><strong>答.</strong> 这里有针对WordPress的插件： <a 
+href="http://www.kimili.com/plugins/kml_flashembed" rel="external">这里</a>。</dd>
+		  </dl>
+		  <dl>
+			 <dt><strong>问.</strong> SWFObject 是否可以与 Dreamweaver 、 Golive协同工作?</dt>
+			 <dd><strong>答.</strong> 这里可以得到一个Dreamweaver 扩展<a 
+href="http://www.communitymx.com/abstract.cfm?cid=3DA1E" rel="external">在CommunityMX</a>。
+目前还没有GoLive扩展。</dd>
+		  </dl>
+		<dl>
+			 <dt><strong>问.</strong> 哪里可以找到其他语言的翻译?</dt>
+			 <dd><strong>答.</strong> <a 
+href="http://weblog.shaoken.be/index.php?2005/10/24/26-howto-detection-du-flash-player"
+ rel="external">法语</a> ,<a href="http://www.axbom.se/flashobject" 
+rel="external">瑞典语</a>, <a 
+href="http://www.magnificaweb.it/flashobject/" rel="external">意大利语</a>, <a
+ href="http://www.powerflasher.de/sites/blog/swfobject/">德语</a>, <a 
+href="http://www.cms10.net/cuerpos107.html" rel="external">西班牙语</a>, <a 
+href="http://www.flashdesigner.pl/przyklady/t1060.php" rel="external">波兰
+语(部分)</a>, <a 
+href="http://www.trick7.com/blog/2006/06/15-135235.php#more" 
+rel="external">日语</a>, <a 
+href="http://andregs.blogspot.com/2006/09/swfobject-insero-e-deteco-do-flash.html">葡
+萄牙语</a>,和 <a href="http://www.timovirtanen.com/?p=3" rel="external">芬兰语</a>。</dd>
+		  </dl>
+		<dl>
+			 <dt><strong>问.</strong> 有支持FlashIDE的发布插件么？</dt>
+			 <dd><strong>答.</strong> 有！你可以在这里得到： <a 
+href="http://flog.fluid.com/experiments/swfobject-extension/" 
+rel="external">Fluid Flash Blog</a>。</dd>
+		  </dl>
+		<dl>
+			 <dt><strong>问.</strong> 谁在使用SWFObject/FlashObject?</dt>
+			 <dd><strong>答.</strong> 这些网站： <a href="http://www.loc.gov/bookfest/"
+ rel="external">The Library of Congress</a>, <a 
+href="http://www.adobe.com/">Adobe.com</a> (制定的轻量版本), <a 
+href="http://www.amazon.com/">Amazon.com</a>, <a 
+href="http://www.windows.com/" rel="external">Windows.com</a>, <a 
+href="http://www.youtube.com/" rel="external">YouTube.com</a>, <a 
+href="http://www.skype.com/" rel="external">skype.com</a>, <a 
+href="http://www.snapple.com/" rel="external">Snapple.com</a>, 包括 Adobe 
+Photoshop (<a 
+href="http://www.adobe.com/support/downloads/detail.jsp?ftpID=2960" 
+rel="external">在Flash画廊中的</a>) 和大量其他的网站. Colin Moock 也 <a 
+href="http://www.moock.org/webdesign/flash/detection/moockfpi/" 
+rel="external">推荐这种解决方案</a>。</dd>
+		  </dl>
+		</div>
+		
+		<p>仍然有疑问? 这里有我之前的一些文章[<a 
+href="http://blog.deconcept.com/2004/10/14/web-standards-compliant-javascript-flash-detect-and-embed/">1</a>,
+ <a 
+href="http://blog.deconcept.com/2005/03/31/proper-flash-embedding-flashobject-best-practices/">2</a>,
+ <a href="http://blog.deconcept.com/2005/07/24/flashobject-1-2/">3</a>] 
+这些日志，以及评论含有许多丰富的解决思路。</p>
+		
+		<h3>致谢</h3>
+		<p><a href="http://www.tobyjoe.com/" rel="external">Toby Boudreaux</a>给
+了我大量的建议，让我的代码更加快捷可靠。</p>
+		</div>
+
+
+
+</div></body></html>

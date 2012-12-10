@@ -1,0 +1,732 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  
+  
+
+  
+
+
+  
+
+  
+    <title>
+      Player5Skinning –
+      JW Player – Trac
+    </title>
+        <link rel="search" 
+href="http://developer.longtailvideo.com/trac/search">
+        <link rel="help" 
+href="http://developer.longtailvideo.com/trac/wiki/TracGuide">
+        <link rel="alternate" 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Skinning?format=txt"
+ type="text/x-trac-wiki" title="Plain Text">
+        <link rel="up" 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Skinning" 
+title="View Latest Version">
+        <link rel="start" 
+href="http://developer.longtailvideo.com/trac/wiki">
+        <link rel="stylesheet" href="Player5Skinning_files/trac.css" 
+type="text/css"><link rel="stylesheet" 
+href="Player5Skinning_files/wiki.css" type="text/css">
+        <link rel="shortcut icon" 
+href="http://www.longtailvideo.com/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="http://www.longtailvideo.com/favicon.ico"
+ type="image/x-icon">
+      <link type="application/opensearchdescription+xml" rel="search" 
+href="http://developer.longtailvideo.com/trac/search/opensearch" 
+title="Search JW Player">
+    <script type="text/javascript" src="Player5Skinning_files/jquery.js"></script><script type="text/javascript" src="Player5Skinning_files/trac.js"></script><script type="text/javascript" src="Player5Skinning_files/search.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/trac/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor("Link to this section");
+      });
+    </script>
+    <link rel="stylesheet" type="text/css" 
+href="Player5Skinning_files/style.css">
+    <script type="text/javascript" src="Player5Skinning_files/swfobject.js"></script>
+  </head><body>
+	<!--
+	<div id="crosslinks">
+		Other product management sites: 
+		<a href="http://trac.longtailvideo.com/trac">Website/Adsolution</a>  | 
+		<a href="https://code.bitsontherun.com/trac">Bits on the Run</a> | 
+		<a href="http://ova.longtailvideo.com/trac">Open Video Ads</a> 
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			if($.trim($('#metanav').text()).substr(0,9) == 'logged in') { 
+				$('#crosslinks').css('display','block');
+			}
+		});
+	</script>
+	-->
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://developer.longtailvideo.com/trac"><img
+ src="Player5Skinning_files/logo.gif" alt=""></a>
+      </div>
+      <form id="search" action="/trac/search" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input id="proj-search" name="q" size="18" type="text">
+          <input value="Search" type="submit">
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="last first"><a 
+href="http://developer.longtailvideo.com/trac/login">Login</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a 
+href="http://developer.longtailvideo.com/trac/wiki">Wiki</a></li><li><a 
+href="http://developer.longtailvideo.com/trac/roadmap">Roadmap</a></li><li><a
+ href="http://developer.longtailvideo.com/trac/timeline">Timeline</a></li><li><a
+ href="http://developer.longtailvideo.com/trac/browser">Source Code</a></li><li><a
+ href="http://developer.longtailvideo.com/trac/report/3">Tickets</a></li><li
+ class="last"><a href="http://developer.longtailvideo.com/trac/testing">Testing</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+            <li class="first "><a 
+href="http://developer.longtailvideo.com/trac/wiki/WikiStart">Start Page</a></li><li><a
+ href="http://developer.longtailvideo.com/trac/wiki/TitleIndex">Index</a></li><li><a
+ 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Skinning?action=history">History</a></li><li
+ class="last"><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Skinning?action=diff&amp;version=37">Last
+ Change</a></li>
+          </ul>
+        <hr>
+      </div>
+    <div id="content" class="wiki">
+      <div class="wikipage searchable">
+        
+          <p>
+</p><div class="wiki-toc">
+                <h4>JW Player 5 for Flash</h4>
+                <ol>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/WikiStart">Overview</a></li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5FlashVars">All
+ Flashvars</a></li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Formats">Supported
+ Formats</a></li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/FlashSecurity">Crossdomain
+ Security</a><br>&nbsp;</li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Api">API Calls</a></li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Events">Events
+ Overview</a><br>&nbsp;</li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Skinning">All 
+Skin Elements</a><br>&nbsp;</li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5PluginsBuilding">Building
+ Plugins</a></li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5PluginsCompiling">Compiling
+ Plugins</a><br>&nbsp;</li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player4WikiStart">Version
+ 4.x Documentation</a></li>
+                </ol>
+                </div>
+
+<h1 id="GuideToXML-ImageSkinninginJWPlayer5">JW Player 5 XML-图片 皮肤制作向导 <a title="Link to this section" 
+href="#GuideToXML-ImageSkinninginJWPlayer5" class="anchor"> ¶</a></h1>
+<h2 id="Overview">概述<a title="Link to this section" 
+href="#Overview" class="anchor"> ¶</a></h2>
+<p>
+JW Player 5版本之前,只能用flash制作皮肤. 
+但现在,  JW Player 5发布了, 设计者们可以用自己喜爱的设计器制作皮肤, 并且保存成位图格式. 
+允许快速建模，不必编译一个swf文件, 不必具备flash经验也能完成皮肤的制作.</p>
+<h3 id="BitmapFileFormats">位图格式<a title="Link to this 
+section" href="#BitmapFileFormats" class="anchor"> ¶</a></h3>
+<p>
+JW Player 5 接受大部分的位图格式，包括: 
+</p>
+<ul><li>JPG
+</li>
+<li>GIF <i>允许透明</i>
+</li>
+<li>PNG (8-Bit) <i> 允许透明</i>
+</li>
+<li>PNG (24-Bit) <i> 允许透明和半透明</i>
+</li>
+</ul>
+<h2 id="Configuration">配置<a title="Link to this 
+section" href="#Configuration" class="anchor"> ¶</a></h2>
+<h3 id="TheXMLDocument"> XML 文档<a title="Link to this section" 
+href="#TheXMLDocument" class="anchor"> ¶</a></h3>
+<p>
+ XML Document 存储了皮肤的所有设置.它包含了文本和dock元素的颜色设置, 控制条的边缘和文字大小, 以及皮肤中所有元素的图片所在的路径.</p>
+<h3 id="AnatomyoftheJWPlayerSkin">剖析 JW Player 皮肤<a 
+title="Link to this section" href="#AnatomyoftheJWPlayerSkin" 
+class="anchor"> ¶</a></h3>
+<p>
+一个播放器的皮肤由自身的设置及其组件所组成.  完整的皮肤 XML 文件, 点击这里.
+</p>
+<h4 id="BasicXMLStructureofaSkin">基本的皮肤 XML 结构<a 
+title="Link to this section" href="#BasicXMLStructureofaSkin" 
+class="anchor"> ¶</a></h4>
+<pre class="wiki">&lt;?xml version="1.0"?&gt;
+&lt;skin version="1.0" name="SkinName" author="http://www.yoursite.com/"&gt;
+	&lt;settings&gt;
+		&lt;setting ... /&gt;
+		&lt;setting ... /&gt;
+	&lt;/settings&gt;
+	&lt;components&gt;
+		&lt;component name="controlbar"&gt;
+			&lt;settings&gt;
+				&lt;setting ... /&gt;
+				&lt;setting ... /&gt;
+			&lt;/setting&gt;
+			&lt;element ... /&gt;
+			&lt;element ... /&gt;
+			&lt;element ... /&gt;
+		&lt;/component&gt;
+		&lt;component name="display"&gt;
+			&lt;element ... /&gt;
+			&lt;element ... /&gt;
+			&lt;element ... /&gt;
+		&lt;/component&gt;
+		&lt;component name="dock"&gt;
+			&lt;element ... /&gt;
+			&lt;element ... /&gt;
+			&lt;element ... /&gt;
+		&lt;/component&gt;
+		&lt;component name="playlist"&gt;
+			&lt;element ... /&gt;
+			&lt;element ... /&gt;
+			&lt;element ... /&gt;
+		&lt;/component&gt;
+	&lt;/components&gt;
+&lt;/skin&gt;
+</pre>
+<h4 id="BeginningYourXMLSkinDocument">开始制作你的  XML 皮肤文档<a title="Link to this section" 
+href="#BeginningYourXMLSkinDocument" class="anchor"> ¶</a></h4>
+<p>
+公开的 XML 文档声明表示它是一个 XML 格式的文档, 并且要建立成皮肤.  皮肤元素里面是连个属性:  NAME 和 AUTHOR.  
+</p>
+<pre class="wiki">&lt;?xml version="1.0"?&gt;
+&lt;skin version="1.0" name="SkinName" author="http://www.yoursite.com/"&gt;
+</pre>
+<p>
+                
+你可以用你自己的皮肤名称和网址来代替, author项目也可以填写你的姓名.
+</p>
+<h4 id="SkinSettings">皮肤设置<a title="Link to this section" 
+href="#SkinSettings" class="anchor"> ¶</a></h4>
+<p>
+皮肤的设置部分定义了控制条的文本颜色.</p>
+<pre class="wiki">&lt;settings&gt;
+	&lt;setting name="backcolor" value="0x000000" /&gt;
+	&lt;setting name="frontcolor" value="0x000000" /&gt;
+	&lt;setting name="lightcolor" value="0x000000" /&gt;
+	&lt;setting name="screencolor" value="0x000000" /&gt;
+&lt;/settings&gt;
+</pre><ul>
+<li>背景色backcolor<br>
+<i>dock项目上的层元素使用的颜色</i>
+</li>
+<li>前景色frontcolor<br>
+<i>进度条上的时间代码使用的颜色</i>
+</li>
+<li>亮色lightcolor
+</li>
+<li>屏幕色screencolor<br>
+<i>视频背后的颜色</i>
+</li>
+</ul>
+<p>
+颜色值用十六进制数表示,就好像在HTML/CSS里一样.  因此, 比如你要制作一个红色的 HTML, 就会赋值成 #FF0000.  而在这个 XML 文档中,就是赋值成 0xFF0000.</p>
+<h4 id="XMLandLinkingtoImages">XML和图片链接<a title="Link 
+to this section" href="#XMLandLinkingtoImages" class="anchor"> ¶</a></h4>
+<p>
+图片必须放在皮肤文件夹下的子目录当中.  比如, 控制条的图片应该放在 controlbar 这个子目录下.</p>
+<h2 id="Components">组件<a title="Link to this section" 
+href="#Components" class="anchor"> ¶</a></h2>
+<p>
+每个组件都是 &lt;components&gt; 元素的子级元素.   JW Player 5 皮肤的四个不同的默认组件是:</p>
+<ul>
+<li>controlbar
+控制条组件</li>
+<li>display
+显示组件</li>
+<li>dock
+dock组件</li>
+<li>playlist 
+播放列表组件</li>
+</ul><p>
+<a style="padding: 0pt; border: medium none;" 
+href="http://developer.longtailvideo.com/trac/attachment/wiki/Player5Skinning/Components.png"><img
+ src="Player5Skinning_files/Components.png" alt="Components" 
+title="Components"></a>
+ 
+</p>
+<h3 id="TheControlBar">控制条<a title="Link to this section" 
+href="#TheControlBar" class="anchor"> ¶</a></h3>
+<p>
+控制条组件是 JW Player 皮肤使用的最常用的组件.  
+它控制了视频的播放, 显示你在视频的什么位置,切换至全屏,以及允许你控制音量. 所有 PNG 
+文件必须存储在 controlbar 子目录下，以便功能运行正常.</p>
+<h4 id="ControlBarXMLSyntax">控制条 XML 语法<a title="Link to this
+ section" href="#ControlBarXMLSyntax" class="anchor"> ¶</a></h4>
+<pre class="wiki">&lt;component name="controlbar"&gt;
+   &lt;settings&gt;
+        &lt;setting name="margin" value="50" /&gt;
+   &lt;/settings&gt;
+   &lt;elements&gt;
+        &lt;element name="background" src="file.png" /&gt;
+	&lt;element name="capLeft" src="file.png" /&gt;
+	&lt;element name="capRight" src="file.png" /&gt;
+	&lt;element name="divider" src="file.png" /&gt;
+		
+	&lt;element name="playButton" src="file.png" /&gt;
+	&lt;element name="playButtonOver" src="file.png" /&gt;	
+	&lt;element name="pauseButton" src="file.png" /&gt;
+	&lt;element name="pauseButtonOver" src="file.png" /&gt;
+		
+	&lt;element name="prevButton" src="file.png" /&gt;
+	&lt;element name="prevButtonOver" src="file.png" /&gt;
+	&lt;element name="nextButton" src="file.png" /&gt;
+	&lt;element name="nextButtonOver" src="file.png" /&gt;
+		
+	&lt;element name="stopButton" src="file.png" /&gt;
+	&lt;element name="stopButtonOver" src="file.png" /&gt;
+		
+	&lt;element name="timeSliderRail" src="file.png" /&gt;
+	&lt;element name="timeSliderBuffer" src="file.png" /&gt;
+	&lt;element name="timeSliderProgress" src="file.png" /&gt;
+	&lt;element name="timeSliderThumb" src="file.png" /&gt;
+		
+	&lt;element name="fullscreenButton" src="file.png" /&gt;
+	&lt;element name="fullscreenButtonOver" src="file.png" /&gt;
+	&lt;element name="normalscreenButton" src="file.png" /&gt;
+	&lt;element name="normalscreenButtonOver" src="file.png" /&gt;
+		
+	&lt;element name="muteButton" src="file.png" /&gt;
+	&lt;element name="muteButtonOver" src="file.png" /&gt;
+	&lt;element name="unmuteButton" src="file.png" /&gt;
+	&lt;element name="unmuteButtonOver" src="file.png" /&gt;
+		
+	&lt;element name="volumeSliderRail" src="file.png" /&gt;
+	&lt;element name="volumeSliderBuffer" src="file.png" /&gt;
+	&lt;element name="volumeSliderProgress" src="file.png" /&gt;
+	
+	&lt;element name="blankButton" src="file.png" /&gt;
+	&lt;element name="blankButtonOver" src="file.png" /&gt;
+   &lt;/elements&gt;
+&lt;/component&gt;
+</pre>
+<h4 id="ControlBarSettings">控制条设置<a title="Link to 
+this section" href="#ControlBarSettings" class="anchor"> ¶</a></h4>
+<p>
+控制条组件的设置:
+</p>
+<ul><li>margin<br>
+<i>播放器在全屏模式下控制条的边缘.  以像素为单位.</i>
+</li>
+</ul>
+<h4 id="TheBackgroundElement">背景元素<a 
+title="Link to this section" href="#TheBackgroundElement" class="anchor">
+ ¶</a></h4>
+<p>
+背景是一个图像,它会水平拉伸以适应控制条的宽度.</p>
+<h4 id="ControlBarElements">控制条元素<a title="Link to this 
+section" href="#ControlBarElements" class="anchor"> ¶</a></h4>
+<p>
+<a style="padding: 0pt; border: medium none;" 
+href="http://developer.longtailvideo.com/trac/attachment/wiki/Player5Skinning/controlBar.png"><img
+ src="Player5Skinning_files/controlBar.png"></a>
+</p>
+<h4 id="ElementOrder">元素顺序<a title="Link to this section" 
+href="#ElementOrder" class="anchor"> ¶</a></h4>
+<ul><li>capLeft
+</li><li>playButton/pauseButton
+</li><li>prevButton
+</li><li>nextButton
+</li><li>stopButton
+</li><li>divider
+</li><li>timeSliderRail
+</li><li>timeSliderBuffer
+</li><li>timeSliderProgress
+</li><li>timeSliderThumb
+</li>
+<li>divider <i>重复使用的元素</i>
+</li><li>blankButton
+</li>
+<li>divider <i>重复使用的元素</i>
+</li><li>fullscreenButton/normalscreenButton
+</li>
+<li>divider <i>重复使用的元素</i>
+</li><li>muteButton/unmuteButton
+</li><li>volumeSliderRail
+</li><li>volumeSliderBuffer
+</li><li>volumeSliderProgress
+</li><li>capRight
+</li></ul><p>
+         
+</p>
+<h4 id="CapsandDividers">Caps和 Dividers<a title="Link to this 
+section" href="#CapsandDividers" class="anchor"> ¶</a></h4>
+<p>
+控制条中有些元素会允许你在元素间增加空格.  他们没有任何功能,只表示控制条的边缘.</p>
+<ul><li>capLeft<br>
+<i>控制条皮肤的左边图像</i>
+</li><li>capRight<br>
+<i>控制条皮肤的右边图像</i>
+</li>
+<li>divider (该元素出现了三次)<br>
+<i>按钮和线段之间的分隔符.</i>
+</li>
+</ul>
+<p>
+注意: JW Player 5 如果没有 <strong>capLeft</strong>
+ 和 <strong>capRight</strong> 元素,那么 XML 文件会加载失败.
+         
+</p>
+<h4 id="Buttons">按钮<a title="Link to this section" href="#Buttons" 
+class="anchor"> ¶</a></h4>
+<p>
+按钮有两种状态.  它们是 <strong>button</strong> 和 <strong>buttonOver</strong>
+ (鼠标移至) 状态 -- 两者应该具备相同的分辨率大小 -- 增加你皮肤的元素交互性.
+</p>
+<p>
+按钮元素的状态是:
+</p>
+<ul><li>playButton, playButtonOver
+</li><li>pauseButton, pauseButtonOver
+</li><li>prevButton, prevButtonOver
+</li><li>nextButton, nextButtonOver
+</li><li>stopButton, stopButtonOver
+</li><li>fullscreenButton, fullscreenButtonOver
+</li><li>normalscreenButton, normalscreenButtonOver
+</li><li>muteButton, muteButtonOver
+</li><li>unmuteButton, unmuteButtonOver
+</li><li>blankButton, blankButtonOver
+</li></ul><p>
+ 
+</p>
+<h5 id="ToggleButtons">开关按钮<a title="Link to this section" 
+href="#ToggleButtons" class="anchor"> ¶</a></h5>
+<p>
+根据 JW 
+Player的状态,显示何种按钮.  比如, 视频正在播放时,  "playButton" 被 "pauseButton" 元素所替代.</p>
+<p>
+这样的元素对是:
+</p>
+<ul><li>playButton / pauseButton
+</li><li>fullscreenButton / normalscreenButton
+</li><li>muteButton / unmuteButton
+</li></ul><p>
+ 
+</p>
+<h4 id="TheTimeSlider">时间线 TimeSlider <a title="Link to this section" 
+href="#TheTimeSlider" class="anchor"> ¶</a></h4>
+<p>
+时间线（TimeSlider）元素是独特的元素,由四个元素互相堆积而成.这四个元素中,有三个元素会根据播放器的剩余空间来自动拉伸至相应的尺寸.  
+这三个元素是:</p>
+<ul><li>timeSliderRail<br>
+<i>充当时间线的帧“背景”图像</i></li>
+<li>timeSliderBuffer<br>
+<i>文件缓冲指示器</i>
+</li><li>timeSliderProgress<br>
+<i>文件进度指示器</i>
+</li>
+</ul><p>
+<a style="padding: 0pt; border: medium none;" 
+href="http://developer.longtailvideo.com/trac/attachment/wiki/Player5Skinning/timeSlider.png"><img
+ src="Player5Skinning_files/timeSlider.png" alt="the TimeSlider 
+Explained" title="the TimeSlider Explained"></a>
+</p>
+<p>
+要注意,设计元素时请让他们能够水平地扩展为好.timeSliderBuffer 和 timeSliderProgress 
+元素会动态地增长到总文件长度的某个特定百分比. 最后一个元素, timeSliderThumb 只是一个充当把手的简单图像, 你可以拖动进度条,从而在一个特定时刻进行播放.</p>
+<h4 id="TheVolumeSlider">音量线 VolumeSlider<a title="Link to this section"
+ href="#TheVolumeSlider" class="anchor"> ¶</a></h4>
+<p>
+音量线（volumeSlider） 元素相对时间线（timeSlider）元素而言很小,但它不会自动扩展.  它的大小随你的设计而定.  JW Player 5的皮肤模块会增加 5 pixels 的补白到VolumeSlider的每个边上.</p>
+<ul><li>volumeSliderRail<br>
+<i>充当音量线的帧“背景”图像</i>
+</li><li>volumeSliderBuffer<br>
+<i>总音量.</i>
+</li><li>volumeSliderProgress<br>
+<i>目前设置的音量.</i>
+</li><li>volumeSliderThumb<br>
+<i>滑动音量的把手，也表示音量级别.</i>
+</li>
+</ul><p>
+<a style="padding: 0pt; border: medium none;" 
+href="http://developer.longtailvideo.com/trac/attachment/wiki/Player5Skinning/volumeSlider.png"><img
+ src="Player5Skinning_files/volumeSlider.png"></a>
+</p>
+<p>
+注意: JW Player 5 如果缺少 <strong>volumeSliderRail</strong>
+ 元素,那么XML 文件会加载失败.
+  
+</p>
+<h4 id="BlankButton">空白按钮 BlankButton<a title="Link to this section" 
+href="#BlankButton" class="anchor"> ¶</a></h4>
+<p>
+ BlankButton 是很多插件用到的额外按钮.  没有 "foreground" （前景）元素 (你也不应该设计一个), 它只有一个背景版本 ( 以及一个"Over" 状态) ,为任何通过插件出现的外来按钮而准备.</p>
+<h3 id="DisplayIcons">显示图标<a title="Link to this section" 
+href="#DisplayIcons" class="anchor"> ¶</a></h3>
+<p>
+显示图标就是你在播放器中间所看到的按钮.  在视频播放以前,你看到的是 "Play" 按钮, 同样当你暂停时看到的也是这个按钮.  当你静音时,你会看到 "Mute" 按钮出现.  
+显示按钮包含两个部分: 一个针对每个按钮的全局背景元素, 以及一个按钮本身,在背景层上居中显示.  所有图片必须存储在皮肤的 <strong>display</strong>
+ 子目录下.</p>
+<p>
+<a style="padding: 0pt; border: medium none;" 
+href="http://developer.longtailvideo.com/trac/attachment/wiki/Player5Skinning/Display.png"><img
+ src="Player5Skinning_files/Display.png" alt="Display Background + Icon 
+Combinations" title="Display Background + Icon Combinations"></a>
+</p>
+<p>
+<i>注意:</i>  bufferIcon 在缓冲时会顺时针旋转.</p>
+<h4 id="DisplayXMLSyntax">显示 XML 的语法<a title="Link to this 
+section" href="#DisplayXMLSyntax" class="anchor"> ¶</a></h4>
+<pre class="wiki">&lt;component name="display"&gt;
+	&lt;elements&gt;
+		&lt;element name="background" src="file.png" /&gt;
+		&lt;element name="playIcon" src="file.png" /&gt;
+		&lt;element name="muteIcon" src="file.png" /&gt;
+		&lt;element name="bufferIcon" src="file.png" /&gt;
+	&lt;/elements&gt;
+&lt;/component&gt;
+</pre>
+<h3 id="DockIcons">Dock 图标<a title="Link to this section" 
+href="#DockIcons" class="anchor"> ¶</a></h3>
+<p>
+Dock 图标元素坐落于播放器的右上角,可以显示消息,也可以执行功能.  比如,如果你安装了HD插件, 一旦你切换到了 High Definition 播放为ON, 一个小的HD Dock 图标会出现在播放器的右上角,从而让你知道你在播放 HD视频.   Dock 按钮只有一个元素: </p>
+<ul><li>button
+</li><li>buttonOver<br>
+<i>按钮的鼠标移至状态</i>
+</li>
+</ul><p>
+<a style="padding: 0pt; border: medium none;" 
+href="http://developer.longtailvideo.com/trac/attachment/wiki/Player5Skinning/Dock.png"><img
+ src="Player5Skinning_files/Dock.png" alt="Dock " title="Dock "></a>
+ 
+</p>
+<h4 id="DockXMLSyntax">Dock XML 的语法<a title="Link to this section" 
+href="#DockXMLSyntax" class="anchor"> ¶</a></h4>
+<pre class="wiki">&lt;component name="dock"&gt;
+	&lt;elements&gt;
+		&lt;element name="button" src="file.png" /&gt;
+		&lt;element name="buttonOver" src="file.png" /&gt;
+	&lt;/elements&gt;
+&lt;/component&gt;
+</pre>
+<h3 id="Playlist">播放列表playlist<a title="Link to this section" 
+href="#Playlist" class="anchor"> ¶</a></h3>
+<p>
+播放列表元素由两个部分组成.  Playlist Items（播放列表项目）,以及 
+Playlist Slider（播放列表下拉线）.  项目图像会水平扩展,且位于视频叙述/缩略图（description/thumbnail）的背后.  下拉线是一个垂直的控制把手 (thumb).   如果元素小于播放列表的高度,那么<i>background</i> 
+元素会充当播放列表默认的背景.</p>
+<p>
+<a style="padding: 0pt; border: medium none;" 
+href="http://developer.longtailvideo.com/trac/attachment/wiki/Player5Skinning/Playlist.png"><img
+ src="Player5Skinning_files/Playlist.png" alt="Playlist" 
+title="Playlist"></a>
+’
+</p>
+<h4 id="PlaylistXMLSyntax">播放列表 XML 的语法<a title="Link to this 
+section" href="#PlaylistXMLSyntax" class="anchor"> ¶</a></h4>
+<pre class="wiki">&lt;component name="playlist"&gt;
+	&lt;elements&gt;
+		&lt;element name="background" src="background.png" /&gt;
+		&lt;element name="item" src="file.png" /&gt;
+		&lt;element name="itemOver" src="file.png" /&gt;
+		&lt;element name="sliderRail" src="file.png" /&gt;
+		&lt;element name="sliderThumb" src="file.png" /&gt;
+	&lt;/elements&gt;
+&lt;/component&gt;
+</pre>
+<h2 id="InstallingaSkinIntoYourPlayer">为播放器安装一个皮肤<a title="Link to this section" 
+href="#InstallingaSkinIntoYourPlayer" class="anchor"> ¶</a></h2>
+<p>
+你必须把皮肤文件解压到网站的目录下, 从而让人可以访问.接着你可以通过 XML 文件引用皮肤文件, 还可以用另一些 flashvars作额外的自定义. 你能使用的Flashvars有 :</p>
+<h3 id="ZipFileStructure">Zip 文件结构<a title="Link to this 
+section" href="#ZipFileStructure" class="anchor"> ¶</a></h3>
+<p>
+ XML文件应该和 ZIP 文件命名一样,且放在对应目录下.  所有属于相应目录的图片文件必须和XML文件里的路径一致.</p>
+<ul><li>example_skin.xml
+</li>
+<li>controlbar (放有图片的文件夹)</li>
+<li>display (放有图片的文件夹)</li><li>dock (放有图片的文件夹)
+</li><li>playlist (放有图片的文件夹)
+</li></ul>
+<h3 id="Flashvar:skin">Flashvar: 皮肤<a title="Link to this 
+section" href="#Flashvar:skin" class="anchor"> ¶</a></h3>
+<p>
+在下面这行中, 你会看见皮肤 flashvar 被加进了播放器.  在这个例子中, 它在exampleskin子目录下寻找 skin.xml 这个文件:</p>
+<pre class="wiki">so.addParam('flashvars','skin=path/to/example_skin.zip');
+</pre><h3 id="Flashvar:dock">Flashvar: dock<a title="Link to this 
+section" href="#Flashvar:dock" class="anchor"> ¶</a></h3>
+<p>
+要启用dock, 你可以在参数里增加 Flashvar "dock" 一项. 
+ 默认值是 TRUE, 没有必要关掉:</p>
+<pre class="wiki">so.addParam('flashvars','skin=path/to/exampleskin/skin.xml&amp;dock=true');
+</pre>
+<h3 id="Flashvar:controlbar.position">Flashvar: 
+controlbar.position / Flashvar: 
+控制条.位置<a title="Link to this section" 
+href="#Flashvar:controlbar.position" class="anchor"> ¶</a></h3>
+<p>
+你可以指定播放器控制条的位置为 TOP 或 
+BOTTOM .  默认值是 BOTTOM.</p>
+<pre class="wiki">so.addParam('flashvars','skin=path/to/exampleskin/skin.xml&amp;controlbar.position=true');
+</pre>
+<h3 id="Puttingitalltogether">把它们都放在一起<a 
+title="Link to this section" href="#Puttingitalltogether" class="anchor">
+ ¶</a></h3>
+<p>
+下面是 JW Player 5嵌入皮肤的完整代码的例子,禁用了Dock,控制条放在了顶部.</p>
+<pre class="wiki">&lt;div id="videoDiv"&gt;this will be replaced by the JW Player.&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;
+    var so = new SWFObject('JWPlayer5.swf','mpl','800','400','9');
+    so.addParam('flashvars','file=video.flv&amp;skin=example_skin.zip&amp;dock=false&amp;controlbar.position=top');
+    so.addParam('allowfullscreen','true');
+    so.write('videoDiv');
+&lt;/script&gt;
+
+</pre>
+<h2 id="ExampleSkins">皮肤的例子<a title="Link to this section"
+ href="#ExampleSkins" class="anchor"> ¶</a></h2>
+<blockquote>
+<p>
+<a class="ext-link" 
+href="http://developer.longtailvideo.com/trac/changeset/643/skins/beelden?old_path=%2F&amp;format=zip"><span
+ class="icon">下载例子皮肤: Beelden</span></a>
+</p>
+</blockquote>
+<ul>
+  <li>下载例子皮肤的源代码 (文件, XML, Photoshop 源文件)</li>
+</ul>
+        
+        
+      </div>
+          <h3>附件</h3>
+          <ul>
+              <li>
+      <a 
+href="http://developer.longtailvideo.com/trac/attachment/wiki/Player5Skinning/Components.png"
+ title="View attachment">Components.png</a>
+      (<span title="45161 bytes">44.1 kB</span>) - added by <em>bill</em>
+      <a class="timeline" 
+href="http://developer.longtailvideo.com/trac/timeline?from=2009-11-12T12%3A12%3A40Z-0800&amp;precision=second"
+ title="2009-11-12T12:12:40Z-0800 in Timeline">7 months</a> ago.
+                <q>Components</q>
+              </li>
+              <li>
+      <a 
+href="http://developer.longtailvideo.com/trac/attachment/wiki/Player5Skinning/timeSlider.png"
+ title="View attachment">timeSlider.png</a>
+      (<span title="3955 bytes">3.9 kB</span>) - added by <em>bill</em>
+      <a class="timeline" 
+href="http://developer.longtailvideo.com/trac/timeline?from=2009-11-12T12%3A39%3A08Z-0800&amp;precision=second"
+ title="2009-11-12T12:39:08Z-0800 in Timeline">7 months</a> ago.
+                <q>the TimeSlider Explained</q>
+              </li>
+              <li>
+      <a 
+href="http://developer.longtailvideo.com/trac/attachment/wiki/Player5Skinning/Display.png"
+ title="View attachment">Display.png</a>
+      (<span title="8388 bytes">8.2 kB</span>) - added by <em>bill</em>
+      <a class="timeline" 
+href="http://developer.longtailvideo.com/trac/timeline?from=2009-11-12T13%3A40%3A19Z-0800&amp;precision=second"
+ title="2009-11-12T13:40:19Z-0800 in Timeline">7 months</a> ago.
+                <q>Display Background + Icon Combinations</q>
+              </li>
+              <li>
+      <a 
+href="http://developer.longtailvideo.com/trac/attachment/wiki/Player5Skinning/Dock.png"
+ title="View attachment">Dock.png</a>
+      (<span title="3147 bytes">3.1 kB</span>) - added by <em>bill</em>
+      <a class="timeline" 
+href="http://developer.longtailvideo.com/trac/timeline?from=2009-11-12T14%3A01%3A23Z-0800&amp;precision=second"
+ title="2009-11-12T14:01:23Z-0800 in Timeline">7 months</a> ago.
+                <q>Dock</q>
+              </li>
+              <li>
+      <a 
+href="http://developer.longtailvideo.com/trac/attachment/wiki/Player5Skinning/Playlist.png"
+ title="View attachment">Playlist.png</a>
+      (<span title="34693 bytes">33.9 kB</span>) - added by <em>bill</em>
+      <a class="timeline" 
+href="http://developer.longtailvideo.com/trac/timeline?from=2009-11-12T14%3A36%3A22Z-0800&amp;precision=second"
+ title="2009-11-12T14:36:22Z-0800 in Timeline">7 months</a> ago.
+                <q>Playlist</q>
+              </li>
+              <li>
+      <a 
+href="http://developer.longtailvideo.com/trac/attachment/wiki/Player5Skinning/controlBar.png"
+ title="View attachment">controlBar.png</a>
+      (<span title="14051 bytes">13.7 kB</span>) - added by <em>bill</em>
+      <a class="timeline" 
+href="http://developer.longtailvideo.com/trac/timeline?from=2010-01-12T08%3A09%3A50Z-0800&amp;precision=second"
+ title="2010-01-12T08:09:50Z-0800 in Timeline">5 months</a> ago.
+              </li>
+              <li>
+      <a 
+href="http://developer.longtailvideo.com/trac/attachment/wiki/Player5Skinning/volumeSlider.png"
+ title="View attachment">volumeSlider.png</a>
+      (<span title="9887 bytes">9.7 kB</span>) - added by <em>bill</em>
+      <a class="timeline" 
+href="http://developer.longtailvideo.com/trac/timeline?from=2010-01-12T08%3A12%3A30Z-0800&amp;precision=second"
+ title="2010-01-12T08:12:30Z-0800 in Timeline">5 months</a> ago.
+              </li>
+          </ul>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Skinning?format=txt">Plain
+ Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" xml:lang="en" lang="en"><hr>
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img 
+src="Player5Skinning_files/trac_logo_mini.png" alt="Trac Powered" 
+height="30" width="107"></a>
+      <p class="left">
+        Powered by <a 
+href="http://developer.longtailvideo.com/trac/about"><strong>Trac 0.11</strong></a><br>
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.
+      </p>
+      <p class="right">Visit the Trac open source project at<br><a 
+href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script><script src="Player5Skinning_files/ga.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-4011032-5");
+			pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
+</body></html>

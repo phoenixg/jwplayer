@@ -1,0 +1,340 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  
+  
+
+  
+
+
+  
+
+  
+    <title>
+      Player5MediaProviders –
+      JW Player – Trac
+    </title>
+        <link rel="search" 
+href="http://developer.longtailvideo.com/trac/search">
+        <link rel="help" 
+href="http://developer.longtailvideo.com/trac/wiki/TracGuide">
+        <link rel="alternate" 
+href="http://developer.longtailvideo.com/trac/wiki/Player5MediaProviders?format=txt"
+ type="text/x-trac-wiki" title="Plain Text">
+        <link rel="up" 
+href="http://developer.longtailvideo.com/trac/wiki/Player5MediaProviders"
+ title="View Latest Version">
+        <link rel="start" 
+href="http://developer.longtailvideo.com/trac/wiki">
+        <link rel="stylesheet" 
+href="Player5MediaProviders_files/trac.css" type="text/css"><link 
+rel="stylesheet" href="Player5MediaProviders_files/wiki.css" 
+type="text/css">
+        <link rel="shortcut icon" 
+href="http://www.longtailvideo.com/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="http://www.longtailvideo.com/favicon.ico"
+ type="image/x-icon">
+      <link type="application/opensearchdescription+xml" rel="search" 
+href="http://developer.longtailvideo.com/trac/search/opensearch" 
+title="Search JW Player">
+    <script type="text/javascript" src="Player5MediaProviders_files/jquery.js"></script><script type="text/javascript" src="Player5MediaProviders_files/trac.js"></script><script type="text/javascript" src="Player5MediaProviders_files/search.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/trac/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor("Link to this section");
+      });
+    </script>
+    <link rel="stylesheet" type="text/css" 
+href="Player5MediaProviders_files/style.css">
+    <script type="text/javascript" src="Player5MediaProviders_files/swfobject.js"></script>
+  </head><body>
+	<!--
+	<div id="crosslinks">
+		Other product management sites: 
+		<a href="http://trac.longtailvideo.com/trac">Website/Adsolution</a>  | 
+		<a href="https://code.bitsontherun.com/trac">Bits on the Run</a> | 
+		<a href="http://ova.longtailvideo.com/trac">Open Video Ads</a> 
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			if($.trim($('#metanav').text()).substr(0,9) == 'logged in') { 
+				$('#crosslinks').css('display','block');
+			}
+		});
+	</script>
+	-->
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://developer.longtailvideo.com/trac"><img
+ src="Player5MediaProviders_files/logo.gif" alt=""></a>
+      </div>
+      <form id="search" action="/trac/search" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input id="proj-search" name="q" size="18" type="text">
+          <input value="Search" type="submit">
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="last first"><a 
+href="http://developer.longtailvideo.com/trac/login">Login</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a 
+href="http://developer.longtailvideo.com/trac/wiki">Wiki</a></li><li><a 
+href="http://developer.longtailvideo.com/trac/roadmap">Roadmap</a></li><li><a
+ href="http://developer.longtailvideo.com/trac/timeline">Timeline</a></li><li><a
+ href="http://developer.longtailvideo.com/trac/browser">Source Code</a></li><li><a
+ href="http://developer.longtailvideo.com/trac/report/3">Tickets</a></li><li
+ class="last"><a href="http://developer.longtailvideo.com/trac/testing">Testing</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+            <li class="first "><a 
+href="http://developer.longtailvideo.com/trac/wiki/WikiStart">Start Page</a></li><li><a
+ href="http://developer.longtailvideo.com/trac/wiki/TitleIndex">Index</a></li><li><a
+ 
+href="http://developer.longtailvideo.com/trac/wiki/Player5MediaProviders?action=history">History</a></li><li
+ class="last"><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5MediaProviders?action=diff&amp;version=15">Last
+ Change</a></li>
+          </ul>
+        <hr>
+      </div>
+    <div id="content" class="wiki">
+      <div class="wikipage searchable">
+        
+          <p>
+</p><div class="wiki-toc">
+                <h4>JW Player 5 for Flash</h4>
+                <ol>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/WikiStart">Overview</a></li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5FlashVars">All
+ Flashvars</a></li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Formats">Supported
+ Formats</a></li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/FlashSecurity">Crossdomain
+ Security</a><br>&nbsp;</li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Api">API Calls</a></li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Events">Events
+ Overview</a><br>&nbsp;</li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5Skinning">All 
+Skin Elements</a><br>&nbsp;</li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5PluginsBuilding">Building
+ Plugins</a></li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5PluginsCompiling">Compiling
+ Plugins</a><br>&nbsp;</li>
+                <li><a 
+href="http://developer.longtailvideo.com/trac/wiki/Player4WikiStart">Version
+ 4.x Documentation</a></li>
+                </ol>
+                </div>
+
+<h1 id="JWPlayer:MediaProviders">JW Player: Media Providers<a 
+title="Link to this section" href="#JWPlayer:MediaProviders" 
+class="anchor"> ¶</a></h1>
+<p>
+<strong>Media Providers</strong> 让播放器能够在不同平台上播放不同类型的媒体.  设置 <i>provider</i> 
+属性 (以前在版本4中称作 <i>type</i>) 通过 <a 
+class="wiki" 
+href="http://developer.longtailvideo.com/trac/wiki/Player5FlashVars">flashvars</a>
+ 或 <a class="wiki" 
+href="http://developer.longtailvideo.com/trac/wiki/Player5PlaylistItem">playlist</a>
+ 指示播放器使用相应的 Media Provider.</p>
+<h2 id="Built-inMediaProviders">内置的Media Providers<a title="Link 
+to this section" href="#Built-inMediaProviders" class="anchor"> ¶</a></h2>
+<p>
+播放器包含以下几个内置的 Media Providers:
+</p>
+<ul>
+<li><i>video</i>: 指渐进下载式的 FLV / MP4 视频. (请注意, AAC 音频要求使用 <i>video</i> Media Provider).
+</li>
+<li><i>http</i>: FLV/MP4视频当作http pseudo-streaming伪流式视频来播放.
+</li>
+<li><i>rtmp</i>: FLV/MP4/MP3 文件从一个 <a class="wiki" 
+href="http://developer.longtailvideo.com/trac/wiki/FlashFormats#RTMPStreaming">RTMP
+ 服务器</a>
+播放</li>
+<li><i>sound</i>: 渐进下载式的 MP3 文件.
+</li>
+<li><i>image</i>: GIF/JPG/PNG 图片.
+</li>
+<li><i>youtube</i>: 来自 YouTube的视频.
+</li>
+</ul>
+<h2 id="ExternallyLoadedMediaProviders">外部加载的  
+Media Providers<a title="Link to this section" 
+href="#ExternallyLoadedMediaProviders" class="anchor"> ¶</a></h2>
+<p>
+除了以上列出的几个 Media Providers之外, 还可以加载外部的Media Providers.  有两种外部的 Providers 可以被加载; 如果 <i>provider</i> 
+包含了  指向一个.swf文件的URL 包含Media Provider,那么就会被加载.  如果 <i>provider</i> 包含了 
+host在LongTail 上的 Provider, 那么就会被加载.</p>
+<h2 id="Examples">例子<a title="Link to this section" 
+href="#Examples" class="anchor"> ¶</a></h2>
+<p>
+以下例子演示了使用 Media 
+Providers 的不同方法
+</p>
+<h3 id="Singleplaylistitem">单一播放列表项目<a title="Link to this 
+section" href="#Singleplaylistitem" class="anchor"> ¶</a></h3>
+<pre class="wiki">&lt;config&gt;
+   &lt;file&gt;myvideo.flv&lt;/file&gt;
+   &lt;provider&gt;video&lt;/provider&gt;
+&lt;/config&gt;
+</pre>
+<h3 id="Multipleplaylistitems">多重播放列表项目<a 
+title="Link to this section" href="#Multipleplaylistitems" 
+class="anchor"> ¶</a></h3>
+<pre class="wiki">&lt;rss version="2.0" 
+	xmlns:media="http://search.yahoo.com/mrss/" 
+	xmlns:jwplayer="http://developer.longtailvideo.com/trac/wiki/FlashFormats"&gt;
+	&lt;channel&gt;
+		&lt;title&gt;Example media RSS playlist&lt;/title&gt;
+		&lt;item&gt;
+			&lt;title&gt;FLV Video&lt;/title&gt;
+			&lt;media:content url="video.flv" /&gt;
+			&lt;jwplayer:provider&gt;video&lt;/jwplayer:provider&gt;
+		&lt;/item&gt;
+		&lt;item&gt;
+			&lt;title&gt;HTTP Streamed FLV&lt;/title&gt;
+			&lt;media:content url="video.flv" /&gt;
+			&lt;jwplayer:provider&gt;http&lt;/jwplayer:provider&gt;
+			&lt;jwplayer:streamer&gt;http://myserver.com/stream.php&lt;/jwplayer:streamer&gt;
+		&lt;/item&gt;
+	&lt;/channel&gt;
+&lt;/rss&gt;
+</pre>
+<h3 id="LoadinganExternalMediaProvider">加载一个外部的 Media 
+Provider<a title="Link to this section" 
+href="#LoadinganExternalMediaProvider" class="anchor"> ¶</a></h3>
+<pre class="wiki">&lt;config&gt;
+   &lt;file&gt;myvideo&lt;/file&gt;
+   &lt;provider&gt;http://www.mysite.com/providers/myprovider.swf&lt;/provider&gt;
+&lt;/config&gt;
+</pre><h2 id="CDNs">CDNs<a title="Link to this section" href="#CDNs" 
+class="anchor"> ¶</a></h2>
+<p><i>http</i> 和 <i>rtmp</i> Providers 可以用几个配置选项来进行定制,从而允许他们连接CDN 和 RTMP 服务器.  这些选项可以使用 <a 
+class="wiki" 
+href="http://developer.longtailvideo.com/trac/wiki/Player5FlashVars">flashvars</a>
+ 或一个 <a class="wiki" 
+href="http://developer.longtailvideo.com/trac/wiki/Player5FlashVars#ConfigXML">xml
+ 配置文件</a>来进行设置</p>
+<h3 id="HTTPstreamingoptions">HTTP 流选项<a title="Link to 
+this section" href="#HTTPstreamingoptions" class="anchor"> ¶</a></h3>
+<ul><li><i>http.startparam</i>
+<ul>
+<li>对于BitGravity:MP4就用 <i>starttime</i>   ,FLV就用 <i>apstart</i>.</li>
+<li>对于 EdgeCast:FLV就用 <i>ec_seek</i>  .</li>
+<li>对于 Limelight:FLV就用 <i>fs</i>,MP4就用<i>ms</i>.</li>
+<li>对于 Lighttpd:FLV 和 MP4都用 <i>start</i>  .</li>
+</ul></li></ul>
+<p>
+ MRSS 播放列表的例子:</p>
+<pre class="wiki">&lt;rss version="2.0" 
+	xmlns:media="http://search.yahoo.com/mrss/" 
+	xmlns:jwplayer="http://developer.longtailvideo.com/trac/wiki/FlashFormats"&gt;
+	&lt;channel&gt;
+		&lt;title&gt;Example media RSS playlist&lt;/title&gt;
+		&lt;item&gt;
+			&lt;title&gt;BitGravity Video&lt;/title&gt;
+			&lt;media:content url="video.flv" /&gt;
+			&lt;jwplayer:provider&gt;http&lt;/jwplayer:provider&gt;
+			&lt;jwplayer:http.startparam&gt;apstart&lt;/jwplayer:http.startparam&gt;
+		&lt;/item&gt;
+		&lt;item&gt;
+			&lt;title&gt;Lighttpd Video&lt;/title&gt;
+			&lt;media:content url="video.flv" /&gt;
+			&lt;jwplayer:provider&gt;http&lt;/jwplayer:provider&gt;
+		&lt;/item&gt;
+	&lt;/channel&gt;
+&lt;/rss&gt;
+</pre>
+<h3 id="RTMPstreamingoptions">RTMP 流选项<a title="Link
+ to this section" href="#RTMPstreamingoptions" class="anchor"> ¶</a></h3>
+<ul><li><i>rtmp.loadbalance</i>
+<ul>
+<li>对于Highwinds: <i>true</i>
+</li>
+<li>对于 VDOX: <i>true</i>
+</li>
+</ul></li></ul>
+<p>
+ MRSS 播放列表的例子:
+</p>
+<pre class="wiki">&lt;rss version="2.0" 
+	xmlns:media="http://search.yahoo.com/mrss/" 
+	xmlns:jwplayer="http://developer.longtailvideo.com/trac/wiki/FlashFormats"&gt;
+	&lt;channel&gt;
+		&lt;title&gt;Example media RSS playlist&lt;/title&gt;
+		&lt;item&gt;
+			&lt;title&gt;Highwinds Video&lt;/title&gt;
+			&lt;media:content url="http://hwcdn.net/nksdjg/video.flv" /&gt;
+			&lt;jwplayer:provider&gt;rtmp&lt;/jwplayer:provider&gt;
+			&lt;jwplayer:rtmp.loadbalance&gt;true&lt;/jwplayer:rtmp.loadbalance&gt;
+		&lt;/item&gt;
+		&lt;item&gt;
+			&lt;title&gt;VDOX Video&lt;/title&gt;
+			&lt;media:content url="http://myserver.com/video.flv" /&gt;
+			&lt;jwplayer:provider&gt;rtmp&lt;/jwplayer:provider&gt;
+			&lt;jwplayer:rtmp.loadbalance&gt;true&lt;/jwplayer:rtmp.loadbalance&gt;
+		&lt;/item&gt;
+	&lt;/channel&gt;
+&lt;/rss&gt;
+</pre>
+        
+        
+      </div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" 
+href="http://developer.longtailvideo.com/trac/wiki/Player5MediaProviders?format=txt">Plain
+ Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" xml:lang="en" lang="en"><hr>
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img 
+src="Player5MediaProviders_files/trac_logo_mini.png" alt="Trac Powered" 
+height="30" width="107"></a>
+      <p class="left">
+        Powered by <a 
+href="http://developer.longtailvideo.com/trac/about"><strong>Trac 0.11</strong></a><br>
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.
+      </p>
+      <p class="right">Visit the Trac open source project at<br><a 
+href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script><script src="Player5MediaProviders_files/ga.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-4011032-5");
+			pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
+</body></html>

@@ -1,0 +1,425 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html class="js" dir="ltr" xml:lang="en" 
+xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="shortcut icon" 
+href="http://www.longtailvideo.com/support/sites/all/themes/community/favicon.ico"
+ type="image/x-icon">
+	<title>Video Delivery: HTTP Pseudo-Streaming | LongTail Video | Home of
+ the JW Player</title>
+	<link type="text/css" rel="stylesheet" media="all" 
+href="video-delivery-http-pseudo-streaming_files/codefilter.css">
+<link type="text/css" rel="stylesheet" media="all" 
+href="video-delivery-http-pseudo-streaming_files/views.css">
+<link type="text/css" rel="stylesheet" media="all" 
+href="video-delivery-http-pseudo-streaming_files/css_108b133b92d4f18d9e7eea19289d62dd.css">
+	<script type="text/javascript" src="video-delivery-http-pseudo-streaming_files/js_564e3752c96e04caec72fde92decffc4.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/support/", "googleanalytics": { "trackOutgoing": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|avi|csv|doc|exe|flv|gif|gz|jpe?g|js|mp(3|4|e?g)|mov|pdf|phps|png|ppt|rar|sit|tar|torrent|txt|wma|wmv|xls|xml|zip" } });
+//--><!]]>
+</script>
+	<script type="text/javascript" src="video-delivery-http-pseudo-streaming_files/swfobject.js"></script>
+</head><body>
+<div id="Container" class="clearfix">
+
+		<div id="TopStrip">
+		<ul class="TabNav clearfix" id="Top">
+			<li class="Logo"><a href="http://www.longtailvideo.com/">LongTail 
+Video Home</a></li>
+			<li class="Products"><a href="http://www.longtailvideo.com/">Products</a></li>
+			<li class="Support"><a href="http://www.longtailvideo.com/support/">Support</a></li>
+		</ul>
+		<a href="http://www.longtailvideo.com/order/" class="OrderBtn Button 
+Orange">Order Now</a>
+		<span class="LoginGroup">
+			<strong>AdSolution</strong>
+			<a href="https://dashboard.longtailvideo.com/signup.aspx">Sign Up</a>
+ | <a href="https://dashboard.longtailvideo.com/">Login »</a>
+		</span>
+		<span class="LoginGroup">
+			<strong>Bits on the Run</strong>
+			<a href="http://www.longtailvideo.com/bits-on-the-run/sign-up">Sign 
+Up</a> | <a href="https://manage.bitsontherun.com/login/">Login »</a>
+		</span>
+	</div>
+	<div id="Header">
+		<a href="http://www.longtailvideo.com/support/" class="LogoHeader"><img
+ src="video-delivery-http-pseudo-streaming_files/logo_header.png" 
+alt="LongTail Video" title="LongTail Video" border="0" height="41" 
+width="140"></a>
+		
+		<ul class="TertiaryLinks">
+			<li><a href="http://www.longtailvideo.com/support/forums/" 
+class="Forums">Forums</a></li>
+			<li><a 
+href="http://www.longtailvideo.com/support/jw-player-setup-wizard/" 
+class="Wizard">Wizard</a></li>
+			<li><a href="http://www.longtailvideo.com/players/jw-flv-player/" 
+class="Download">Download</a></li>
+		</ul>
+		
+		<ul class="BreadCrumbs"><li><a 
+href="http://www.longtailvideo.com/support/">Home</a> »</li><li><a 
+href="http://www.longtailvideo.com/support/jw-player">JW Player</a> »</li><li><a
+ 
+href="http://www.longtailvideo.com/support/jw-player/jw-player-for-flash-v4">JW
+ Player for Flash v4</a> »</li><li class="last">Video Delivery: HTTP 
+Pseudo-Streaming</li></ul>
+		
+<ul class="TopNav">		     <li id="JWPlayer" class="Top Active hoverable"><a
+ href="http://www.longtailvideo.com/support/jw-player" class="TopLevel">JW
+ Player</a></li>
+		     <li id="AddOns" class="Top hoverable"><a 
+href="http://www.longtailvideo.com/support/addons" class="TopLevel">AddOns</a></li>
+		     <li id="AdSolution" class="Top hoverable"><a 
+href="http://www.longtailvideo.com/support/adsolution" class="TopLevel">AdSolution</a></li>
+		     <li id="Forums" class="Top hoverable"><a 
+href="http://www.longtailvideo.com/support/forums" class="TopLevel">Forums</a></li>
+		     <li id="Blog" class="Top hoverable"><a 
+href="http://www.longtailvideo.com/support/blog" class="TopLevel">Blog</a></li>
+		</ul>
+	</div>	
+			
+	
+	<div class="Grid12 Document" style="position: relative;">
+				
+<h1>视频分发: HTTP Pseudo-Streaming / HTTP伪流式视频</h1>
+
+	<style>
+		div.Document h1 {
+			margin-left: 240px;
+		}
+	</style>
+	<div class="Grid8">
+  <div class="section" id="http-pseudostreaming">
+	<h2>目的</h2>
+	<p>此指南讨论并提供了用 Flash v4在JW Player里播放  HTTP 
+Pseudo-streaming / HTTP 伪流式视频的方法.</p>
+	<h2>介绍</h2>
+	<p> MP4 和 FLV 视频都可以通过一个 
+HTTP伪流式（ pseudostreaming）的机制来播放. 这个机制允许播放还没有下载到的部分. YouTube就是一个应用伪流式的例子. HTTP 伪流式 可以通过设置 <a class="reference external" 
+href="http://www.longtailvideo.com/support/jw-player/jw-player-for-flash-v4/12204/configuration-options"><em>option</em></a>
+ <em>type=http</em> 来启用.</p>
+	<p>HTTP 伪流式结合了 HTTP 
+下载的优势 (穿透任何防火墙, 低带宽的用户只要等待下载完成即可播放) ，而且还可以直接播放未下载到的部分. 唯一的HTTP 伪流式相对于flash官方的 <a 
+class="reference external" 
+href="http://www.longtailvideo.com/support/jw-player/jw-player-for-flash-v4/12208/video-delivery-rtmp-streaming"><em>RTMP
+ 流</em></a> 的缺点就是安全性稍差 (HTTP 比 RTMP更容易侦测) ，并且在寻找（seeking）大视频文件时需要更长的加载时间 
+(&gt;15 分钟).</p>
+	<p>不要把HTTP 伪流式和HTTP 动态流式相混淆了.后者是目前 Adobe开发的全新机制, 它把原视频切割成一个个所谓的 <em>chunks</em>
+ ，每个几秒. 视频播放器随之把这些 <em>chunks</em>
+ 粘贴在一起进行播放.  JW Player (4x) 的版本<strong>不支持</strong> HTTP 动态流式.</p>
+	<div class="section" id="servers">
+		<h3>目录</h3>
+		<ul>
+			<li><a href="#servers">Servers服务器</a></li>
+			<li><a href="#mechanism">Mechanism机制</a></li>
+			<li><a href="#startparam">Startparam</a><a href="#startparam">起始参数</a></li>
+			<li><a href="#playlists">Playlists播放列表</a></li>
+			<li><a href="#bitrate">Bitrate Switching比特率切换</a></li>
+		</ul>
+		<h2><a name="servers"></a>服务器</h2>
+		<p>HTTP 伪流式不是任何服务器默认就有的. 需要安装一个服务器端的模块来启用它. 以下是两个应用最广泛的 (而且是开源的) 模块:</p>
+		<ul class="simple">
+			<li><a class="reference external" 
+href="http://h264.code-shop.com/trac/wiki">H264 流式模块</a>（用于 Apache, Lighttpd, IIS 和 NginX）.支持 MP4 视频.</li>
+			<li><a class="reference external" 
+href="http://blog.lighttpd.net/articles/2006/03/09/flv-streaming-with-lighttpdmod_flv_streamingmodule">FLV
+ 流式模块</a> （用于 Lighttpd）.支持FLV 视频.</li>
+		</ul>
+		<p>有几家 CDN提供商 (内容分发网络) 也支持 HTTP伪流式. 以下几个都经过了测试： <a 
+class="reference external" href="http://www.bitgravity.com/">Bitgravity</a>,
+ <a class="reference external" href="http://www.cdnetworks.com/">CDNetworks</a>,
+ <a class="reference external" href="http://www.edgecastcdn.com/">Edgecast</a>
+ 和 <a class="reference external" href="http://llnw.com/">Limelight</a>.</p>
+		<p>除了使用服务器端的模块外,伪流式还可以通过服务器端的脚本来启用 (比如使用 PHP 或 .NET). 但我们不建议如此做 - 因为这样的脚本很耗系统资源, 而且安全性差,且只能用于 FLV 文件. 其中比较好的伪流式脚本是： <a class="reference external" 
+href="http://xmoov.com/xmoov-php/">Xmoov-PHP</a>.</p>
+	</div>
+	<div class="section" id="mechanism">
+		<h2><a name="mechanism"></a>机制</h2>
+		<p> HTTP 伪流式是这样工作的:</p>
+		<p>当视频加载时, 播放器读取并存储一系列的 <em>seekpoints</em> 作为视频的metadata（元数据）. 哪里有一个新关键帧（ <em>keyframe</em>）开始，那里就会插入这些seekpoints 进视频 (不仅是秒，还有字节)  .随着这些插入,就是向服务器作了一次请求.</p>
+		<p>当用户寻求（seek）一个未下载到的部分时, 播放器会将它翻译成视频当中最近一处的seekpoints. 然后, 播放器对服务器作一个请求, 就用这个seekpoints作为参数. 
+对于 FLV 视频来说, 偏移量总是以字节数提供的:</p>
+		<div class="highlight-html">
+			<div class="highlight">
+				<pre>http://www.mywebsite.com/videos/bbb.flv?start=219476905
+</pre>
+			</div>
+		</div>
+		<p>对于 MP4 视频, 偏移量总是以秒来提供的:</p>
+		<div class="highlight-html">
+			<div class="highlight">
+				<pre>http://www.mywebsite.com/videos/bbb.mp4?starttime=30.4
+</pre>
+			</div>
+		</div>
+		<p>这时服务器端就会从偏移量起返回视频. 因为该视频的第一个帧是关键帧,播放器就能够正确地加载并播放它. 如果服务器从一个任意的偏移返回视频,播放器就不能取这个流.</p>
+		<div class="admonition note">
+			<p class="last"><em>注意: 有些 FLV 编码器在编码视频的时候不会加进 seekpoints
+ metadata （seekpoints元数据）. 如果没有这个数据, HTTP 伪流式就不能正常工作.如果你觉得你的视频可能缺少了metadata, 那么可以使用我们的 <a
+ class="reference external" 
+href="http://www.longtailvideo.com/addons/plugins/64/Metaviewer">Metaviewer
+ 插件</a> 来检查视频是否具有正确的metadata. 应该是有seekpoints 或 
+keyframes 列表显示出来. 如果没有显示的话, 可以使用 <a class="reference 
+external" href="http://www.buraks.com/flvmdi/">FLVMDI tool</a> 来解析你的 FLV视频，并注入metadata.</em></p>
+		</div>
+	</div>
+	<div class="section" id="startparam">
+		<h2><a name="startparam"></a>Startparam起始参数</h2>
+		<p>当播放器使用一个偏移量来请求视频时, 它使用 <em>start</em>
+ 作为偏移量参数的名称（FLV 视频）， 使用<em>starttime</em> 作为偏移量参数的名称（MP4视频）:</p>
+		<div class="highlight-html">
+			<div class="highlight">
+				<pre>http://www.mywebsite.com/videos/bbb.flv?start=219476905
+http://www.mywebsite.com/videos/bbb.mp4?starttime=30.4
+</pre>
+			</div>
+		</div>
+		<p>这些名称被服务器端的模块和CDN提供商广泛使用.然而, 有时候 CDN 可能使用一个不同的名称作为参数. 
+如果是那样, 那么就使用 <em>http.startparam</em> 选项来设置自定义的偏移量名称. 以下是一些CDN使用不同名称的例子:</p>
+		<ul class="simple">
+			<li><a class="reference external" href="http://www.bitgravity.com/">Bitgravity</a>
+ 使用 <em>http.startparam=apstart</em>（ MP4 视频）.</li>
+			<li><a class="reference external" href="http://www.edgecastcdn.com/">Edgecast</a>
+ 使用 <em>http.startparam=ec_seek</em> （ FLV 视频）.</li>
+			<li><a class="reference external" href="http://llnw.com/">Limelight</a>
+ 使用 <em>http.startparam=fs</em> （ FLV 视频）.</li>
+		</ul>
+		<p>以下是一个SWFObject <a class="reference external" 
+href="http://www.longtailvideo.com/support/jw-player/jw-player-for-flash-v4/12203/supported-player-embed-methods"><em>嵌入式代码的例子</em></a> ， HTTP 伪流式和自定义的起始参数被启用:</p>
+		<div class="highlight-html">
+			<div class="highlight">
+				<pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">'container'</span><span class="nt">&gt;</span>The player will be placed here<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+  <span class="nx">swfobject</span><span class="p">.</span><span class="nx">embedSWF</span><span class="p">(</span><span class="s1">'player.swf'</span><span class="p">,</span><span class="s1">'container'</span><span class="p">,</span><span class="s1">'480'</span><span class="p">,</span><span class="s1">'270'</span><span class="p">,</span><span class="s1">'9.0.115'</span><span class="p">,</span><span class="s1">'false'</span><span class="p">,{</span>
+
+    <span class="nx">file</span><span class="o">:</span><span class="s1">'http://bitcast-a.bitgravity.com/botr/bbb.mp4'</span><span class="p">,</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s1">'http'</span><span class="p">,</span>
+    <span class="s1">'http.startparam'</span><span class="o">:</span><span class="s1">'apstart'</span>
+
+  <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="playlists">
+		<h2><a name="playlists"></a>播放列表</h2>
+		<p>HTTP 伪流式还可以在播放列表中启用, 这要调整 <a class="reference external" 
+href="http://www.longtailvideo.com/support/jw-player/jw-player-for-flash-v4/12206/xml-playlist-support"><em>JWPlayer
+ 命名空间</em></a>.  可以在播放列表中为每个条目设置一个<em>type</em> 和 <em>http.startparam</em>
+ 选项. 如果是这样的话, 你就无需在嵌入代码中设置了 (只要把 <em>file</em> 指向你的播放列表即可).</p>
+		<p>下面是个例子, 一个 RSS feed和一个视频文件:</p>
+		<div class="highlight-xml">
+			<div class="highlight">
+				<pre><span class="nt">&lt;rss</span> <span class="na">version=</span><span class="s">"2.0"</span> <span class="na">xmlns:jwplayer=</span><span class="s">"http://developer.longtailvideo.com/"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;channel&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Playlist with HTTP Pseudostreaming<span class="nt">&lt;/title&gt;</span>
+
+    <span class="nt">&lt;item&gt;</span>
+      <span class="nt">&lt;title&gt;</span>Big Buck Bunny<span class="nt">&lt;/title&gt;</span>
+      <span class="nt">&lt;description&gt;</span>Big Buck Bunny is a short animated film by the Blender Institute,
+         part of the Blender Foundation.<span class="nt">&lt;/description&gt;</span>
+      <span class="nt">&lt;enclosure</span> <span class="na">url=</span><span class="s">"http://myserver.com/botr/bbb.mp4"</span> <span class="na">type=</span><span class="s">"video/mp4"</span> <span class="na">length=</span><span class="s">"3192846"</span> <span class="nt">/&gt;</span>
+
+      <span class="nt">&lt;jwplayer:type&gt;</span>http<span class="nt">&lt;/jwplayer:type&gt;</span>
+      <span class="nt">&lt;jwplayer:http.startparam&gt;</span>apstart<span class="nt">&lt;/jwplayer:http.startparam&gt;</span>
+
+    <span class="nt">&lt;/item&gt;</span>
+  <span class="nt">&lt;/channel&gt;</span>
+
+<span class="nt">&lt;/rss&gt;</span>
+</pre>
+			</div>
+		</div>
+		<p>与其附加（<em>enclosure）元素</em>t, 你还可以使用 <em>media:content</em>
+ 或 <em>jwplayer:file</em> 元素. 更多请见 <a class="reference 
+external" 
+href="http://www.longtailvideo.com/support/jw-player/jw-player-for-flash-v4/12206/xml-playlist-support"><em>XML
+ 播放列表支持</em></a>.</p>
+		<div class="admonition note">
+			<p class="last"><em>注意: 不要忘记在 feed 的顶部的 <strong>xmlns</strong> .播放器需要它 (别的feed阅读器也需要它) 来理解 jwplayer 的各元素.</em></p>
+		</div>
+	</div>
+	<div class="section" id="bitrate-switching">
+		<h2><a name="bitrate"></a>比特率切换</h2>
+		<p>像 <a class="reference external" 
+href="http://www.longtailvideo.com/support/jw-player/jw-player-for-flash-v4/12208/video-delivery-rtmp-streaming"><em>RTMP
+ 流</em></a>一样, HTTP 伪流式包含为每个观看者优化每个视频的能力 . 我们称这一个机制为 <em>比特率切换</em>.</p>
+		<p>要使用比特率切换, 你需要几个版本的 MP4 或 
+FLV 视频, 每个都是不同的质量 (不同的分辨率和比特率). 这些不同的视频，使用一个 mRSS 播放列表来进行加载 (见下面的例子). 播放器会认出你的视频属于何种的 <em>levels</em> ，然后自动选择最高质量的那个:</p>
+		<ul class="simple">
+			<li>适合服务器的带宽（ <em>bandwidth</em> ）» 客户端的网络连接.</li>
+			<li>适合播放器的显示宽度（ <em>width</em> ） (或者, 说得更精确些, 不比 20% 更大).</li>
+		</ul>
+		<p>观看者持续观看视频, 播放器会反复检查这一决定 (并且有可能切换)，随着下列事件的发生进行变化:</p>
+		<ul class="simple">
+			<li><strong>startup</strong>, 视频加载时马上开始第一次计算带宽情况.</li>
+			<li><strong>fullscreen</strong> 开关,  <em>width</em>
+ 会急剧地改变.比如, 浏览器全屏，用户又有很好的网络, 播放器就会提供 
+HD 版本的视频.</li>
+			<li>每次<strong>seek</strong>视频时. 播放器重新缓冲视频流 .这时也会监测带宽是否发生了改变.</li>
+		</ul>
+		<p><em>注意: 如果带宽发生突变，引起视频重新缓冲，那么播放器不会进行带宽切换, 实际上，我们发现如果不这样做，会发生不断的切换，影响用户体验.</em>（没错）</p>
+		<div class="section" id="example">
+			<h3>例子</h3>
+			<p>下面是几个播放列表比特率切换的例子 (只放了一个项目). 
+注意这和常规的（ <em>regular</em>） HTTP 伪流式播放列表类似, 除了每个项目上放了许多个视频这个不同外. 
+ mRSS扩展是唯一一种提供那么多元素的方法，包括 <em>bitrate</em> 和 <em>width</em> 属性:</p>
+<div class="highlight-xml">
+				<div class="highlight">
+					<pre><span class="nt">&lt;rss</span> <span class="na">version=</span><span class="s">"2.0"</span> <span class="na">xmlns:media=</span><span class="s">"http://search.yahoo.com/mrss/"</span>
+  <span class="na">xmlns:jwplayer=</span><span class="s">"http://developer.longtailvideo.com/"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;channel&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Playlist with HTTP Bitrate Switching<span class="nt">&lt;/title&gt;</span>
+
+    <span class="nt">&lt;item&gt;</span>
+      <span class="nt">&lt;title&gt;</span>Big Buck Bunny<span class="nt">&lt;/title&gt;</span>
+      <span class="nt">&lt;description&gt;</span>Big Buck Bunny is a short animated film by the Blender Institute,
+         part of the Blender Foundation.<span class="nt">&lt;/description&gt;</span>
+      <span class="nt">&lt;media:group&gt;</span>
+
+        <span class="nt">&lt;media:content</span> <span class="na">bitrate=</span><span class="s">"1800"</span> <span class="na">url=</span><span class="s">"http://myserver.com/bbb-486.mp4"</span>  <span class="na">width=</span><span class="s">"1280"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;media:content</span> <span class="na">bitrate=</span><span class="s">"1100"</span> <span class="na">url=</span><span class="s">"http://myserver.com/bbb-485.mp4"</span> <span class="na">width=</span><span class="s">"720"</span><span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;media:content</span> <span class="na">bitrate=</span><span class="s">"700"</span> <span class="na">url=</span><span class="s">"http://myserver.com/bbb-484.mp4"</span> <span class="na">width=</span><span class="s">"480"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;media:content</span> <span class="na">bitrate=</span><span class="s">"400"</span> <span class="na">url=</span><span class="s">"http://myserver.com/bbb-483.mp4"</span> <span class="na">width=</span><span class="s">"320"</span> <span class="nt">/&gt;</span>
+
+      <span class="nt">&lt;/media:group&gt;</span>
+      <span class="nt">&lt;jwplayer:type&gt;</span>http<span class="nt">&lt;/jwplayer:type&gt;</span>
+      <span class="nt">&lt;jwplayer:http.startparam&gt;</span>apstart<span class="nt">&lt;/jwplayer:http.startparam&gt;</span>
+    <span class="nt">&lt;/item&gt;</span>
+
+  <span class="nt">&lt;/channel&gt;</span>
+<span class="nt">&lt;/rss&gt;</span>
+</pre>
+				</div>
+			</div>
+			<p>一些提示:</p>
+			<ul class="simple">
+				<li><em>bitrate</em> 属性必须用 kbps 单位, 这是定义在 <a class="reference external" 
+href="http://video.search.yahoo.com/mrss">mRSS spec</a>里的规定.  <em>width</em>
+ 属性的单位必须是像素.</li>
+			  <li>推荐根据质量对视频进行排序, 质量最好的排在最前面. 大多数 RSS阅读器会选择这个进行播放.</li>
+				<li>这个 feed里面的4个不同级别的视频，实际上是我们推荐进行比特率切换的宽屏  MP4 视频. 对于4:3 视频或 FLV 视频, 你可能想要增加比特率或稍稍减少一下分辨率.</li>
+				<li>有些内容发布商进行比特率切换时只是改变了下比特率. 播放器可以这么播放, 但是对比特率和分辨率都做修改的话，级别选项就更多一些 (视频的重复利用, 比如把最小的提供给手机用播放).</li>
+				<li>这里的<em>media:group</em> 元素是可选的,但它在形式上整理组织了一下，看起来更有条理.</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>	</div>
+
+	<div class="ClearFooter">&nbsp;</div>	
+</div>
+
+<div id="Footer">
+	<div class="FooterContainer clearfix">
+		<div class="FooterGrid">
+	<h5>JW Player</h5>
+	<ul class="FooterLinks">
+		<li><a href="http://www.longtailvideo.com/players/jw-flv-player/">JW 
+Player for Flash</a></li>
+		<li><a href="http://www.longtailvideo.com/players/jw-wmv-player/">JW 
+Player for Silverlight</a></li>
+		<li><a href="http://www.longtailvideo.com/players/jw-image-rotator/">JW
+ Image Rotator</a></li>
+		<li><a href="http://www.longtailvideo.com/players/jw-desktop-player/">JW
+ Desktop Player</a></li>
+		<li><a href="http://www.longtailvideo.com/support/jw-player/">Documentation</a></li>
+		<li><a href="http://www.longtailvideo.com/support/forums/jw-player/">Forums</a></li>
+		<li><a href="http://developer.longtailvideo.com/trac/">Developer Wiki</a></li>
+		<li><a href="http://developer.longtailvideo.com/trac/wiki/Player5Api">JW
+ Player APIs</a></li>
+		<li><a 
+href="http://developer.longtailvideo.com/trac/browser/trunk/fl5">JW 
+Player Source Code</a></li>
+	</ul>
+</div>
+			
+<div class="FooterGrid">
+	<h5>AddOns</h5>
+	<ul class="FooterLinks">
+		<li><a href="http://www.longtailvideo.com/addons/">Most Popular</a></li>
+		<li><a href="http://www.longtailvideo.com/addons/?q=&amp;sort=date">Recent
+ Additions</a></li>
+		<li><a href="http://www.longtailvideo.com/addons/skins/">Skins</a></li>
+		<li><a href="http://www.longtailvideo.com/addons/modules/">Modules</a></li>
+		<li><a href="http://www.longtailvideo.com/addons/plugins/">Plugins</a></li>
+		<li><a href="http://www.longtailvideo.com/support/addons/">Documentation</a></li>
+		<li><a href="http://www.longtailvideo.com/support/forums/addons/">Forums</a></li>
+	</ul>
+</div>
+			
+<div class="FooterGrid">
+	<h5>AdSolution</h5>
+	<ul class="FooterLinks">
+		<li><a href="http://www.longtailvideo.com/adsolution/">Overview</a></li>
+		<li><a href="http://www.longtailvideo.com/adsolution/demos/">Demos</a></li>
+		<li><a href="http://www.longtailvideo.com/adsolution/ad-networks/">Ad 
+Networks</a></li>
+		<li><a href="https://dashboard.longtailvideo.com/">Login</a></li>
+		<li><a href="https://dashboard.longtailvideo.com/signup.aspx">Sign Up</a></li>
+		<li><a href="http://www.longtailvideo.com/support/adsolution/">Documentation</a></li>
+		<li><a href="http://www.longtailvideo.com/support/forums/adsolution/">Forums</a></li>
+	</ul>
+</div>
+			
+<div class="FooterGrid">
+	<h5>Bits on the Run</h5>
+	<ul class="FooterLinks">
+		<li><a href="http://www.longtailvideo.com/bits-on-the-run/">Overview</a></li>
+		<li><a href="http://www.longtailvideo.com/bits-on-the-run/pricing/">Pricing</a></li>
+		<li><a href="https://manage.bitsontherun.com/login/">Login</a></li>
+		<li><a href="http://www.longtailvideo.com/bits-on-the-run/sign-up/">Sign
+ Up</a></li>
+		<li><a href="http://www.bitsontherun.com/documentation/system-api/">Documentation</a></li>
+		<li><a href="http://www.bitsontherun.com/faq/">Support</a></li>
+		<li><a href="http://www.bitsontherun.com/documentation/system-api/">Developer
+ API Docs</a></li>
+	</ul>
+</div>
+			
+<div class="FooterGrid">
+	<h5>Company</h5>
+	<ul class="FooterLinks">
+		<li><a href="http://www.longtailvideo.com/about/" rel="nofollow">About
+ Us</a></li>
+		<li><a href="http://www.longtailvideo.com/about/management-team" 
+rel="nofollow">Management Team</a></li>
+		<li><a href="http://www.longtailvideo.com/support/contact-us" 
+rel="nofowllow">Contact Us</a></li>
+		<li><a href="http://www.longtailvideo.com/support/faq">FAQ</a></li>
+		<li><a href="http://www.longtailvideo.com/partnerships/">Partnerships</a></li>
+		<li><a href="http://www.longtailvideo.com/privacy/" rel="nofollow">Privacy
+ Policy</a></li>
+		<li><a href="http://www.longtailvideo.com/about/terms-and-conditions" 
+rel="nofollow">Terms &amp; Conditions</a></li>
+		<li><a href="http://www.longtailvideo.com/about/careers" 
+rel="nofollow">Careers</a></li>
+	</ul>
+</div>
+
+<p class="Copyright">©2010 LongTail Ad Solutions. All Rights Reserved.</p>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="video-delivery-http-pseudo-streaming_files/js_22c59c99b054480b11510fbe227fa47a.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//--><!]]>
+</script><script src="video-delivery-http-pseudo-streaming_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+try{var pageTracker = _gat._getTracker("UA-4011032-1");pageTracker._trackPageview();} catch(err) {}
+//--><!]]>
+</script>
+</body></html>

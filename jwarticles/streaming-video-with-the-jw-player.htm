@@ -1,0 +1,425 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html class="js" dir="ltr" xml:lang="en" 
+xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="shortcut icon" 
+href="http://www.longtailvideo.com/support/sites/all/themes/community/favicon.ico"
+ type="image/x-icon">
+	<title>Streaming Video with the JW Player | LongTail Video | Home of 
+the JW Player</title>
+	<link type="text/css" rel="stylesheet" media="all" 
+href="streaming-video-with-the-jw-player_files/codefilter.css">
+<link type="text/css" rel="stylesheet" media="all" 
+href="streaming-video-with-the-jw-player_files/views.css">
+<link type="text/css" rel="stylesheet" media="all" 
+href="streaming-video-with-the-jw-player_files/css_e6a3135564326586fc343fa0f3f43e1e.css">
+	<script type="text/javascript" src="streaming-video-with-the-jw-player_files/js_437e16a1ae228761d316f2d271598549.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/support/", "googleanalytics": { "trackOutgoing": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|avi|csv|doc|exe|flv|gif|gz|jpe?g|js|mp(3|4|e?g)|mov|pdf|phps|png|ppt|rar|sit|tar|torrent|txt|wma|wmv|xls|xml|zip" } });
+//--><!]]>
+</script>
+	<script type="text/javascript" src="streaming-video-with-the-jw-player_files/swfobject_002.js"></script>
+</head><body>
+<div id="Container" class="clearfix">
+
+		<div id="TopStrip">
+		<ul class="TabNav clearfix" id="Top">
+			<li class="Logo"><a href="http://www.longtailvideo.com/">LongTail 
+Video Home</a></li>
+			<li class="Products"><a href="http://www.longtailvideo.com/">Products</a></li>
+			<li class="Support"><a href="http://www.longtailvideo.com/support/">Support</a></li>
+		</ul>
+		<a href="http://www.longtailvideo.com/order/" class="OrderBtn Button 
+Orange">Order Now</a>
+		<span class="LoginGroup">
+			<strong>AdSolution</strong>
+			<a href="https://dashboard.longtailvideo.com/signup.aspx">Sign Up</a>
+ | <a href="https://dashboard.longtailvideo.com/">Login »</a>
+		</span>
+		<span class="LoginGroup">
+			<strong>Bits on the Run</strong>
+			<a href="http://www.longtailvideo.com/bits-on-the-run/sign-up">Sign 
+Up</a> | <a href="https://manage.bitsontherun.com/login/">Login »</a>
+		</span>
+	</div>
+	<div id="Header">
+		<a href="http://www.longtailvideo.com/support/" class="LogoHeader"><img
+ src="streaming-video-with-the-jw-player_files/logo_header.png" 
+alt="LongTail Video" title="LongTail Video" border="0" height="41" 
+width="140"></a>
+		
+		<ul class="TertiaryLinks">
+			<li><a href="http://www.longtailvideo.com/support/forums/" 
+class="Forums">Forums</a></li>
+			<li><a 
+href="http://www.longtailvideo.com/support/jw-player-setup-wizard/" 
+class="Wizard">Wizard</a></li>
+			<li><a href="http://www.longtailvideo.com/players/jw-flv-player/" 
+class="Download">Download</a></li>
+		</ul>
+		
+		<ul class="BreadCrumbs"><li><a 
+href="http://www.longtailvideo.com/support/">Home</a> »</li><li><a 
+href="http://www.longtailvideo.com/support/jw-player">JW Player</a> »</li><li
+ class="last">Streaming Video with the JW Player</li></ul>
+		
+<ul class="TopNav">		     <li id="JWPlayer" class="Top Active hoverable"><a
+ href="http://www.longtailvideo.com/support/jw-player" class="TopLevel">JW
+ Player</a></li>
+		     <li id="AddOns" class="Top hoverable"><a 
+href="http://www.longtailvideo.com/support/addons" class="TopLevel">AddOns</a></li>
+		     <li id="AdSolution" class="Top hoverable"><a 
+href="http://www.longtailvideo.com/support/adsolution" class="TopLevel">AdSolution</a></li>
+		     <li id="Forums" class="Top hoverable"><a 
+href="http://www.longtailvideo.com/support/forums" class="TopLevel">Forums</a></li>
+		     <li id="Blog" class="Top hoverable"><a 
+href="http://www.longtailvideo.com/support/blog" class="TopLevel">Blog</a></li>
+		</ul>
+	</div>	
+			
+	
+	<div class="Grid12 Document" style="position: relative;">
+				
+<h1>用JW Player添加流式视频</h1>
+
+	<style>
+		div.Document h1 {
+			margin-left: 240px;
+		}
+	</style>
+	<div class="Grid3 DocumentSidebar" style="margin-top: -60px;">
+	  <ul>
+		  <li class="title"><span>JW Player 指南</span></li>
+    		  <ul>
+	<li></li>
+	
+</ul>      </ul>
+    </div>
+    <div class="Grid8">
+  <p><strong>事先请阅读:&nbsp;&nbsp;</strong><a 
+href="http://www.longtailvideo.com/support/jw-player/51/configuring-the-jw-player">配置 JW Player</a></p>
+<h2>目的</h2>
+<p>此指南涵盖了基本的流式视频—它们的工作原理以及如何配置播放器支持它们—并提供了为支持流式视频的播放器和播放列表的配置例子.</p>
+<h2>介绍</h2>
+<p>对网络视频而言,有两种视频传递方式:
+ 渐进下载式 和 流式. 此指南主要针对的是流式视频.</p>
+<p>如果是渐进下载式,文件会在浏览器缓存中渐进地下载.用此方法播放视频需要对视频文件进行持续的下载 . 这意味着你无法跳转到视频的某个还未下载到的特定部分.</p>
+<p>第二种视频传递方式是流式, 这是我们要详细讨论的方式,就是流式视频. 这里, 在客户端和服务端之间有一个持续性的连接,从而建立流; 这个过程没有涉及到下载, 这意味着你可以随时跳转到视频的任何一部分,而不必等待那部分下载完成</p>
+<p>典型来讲, 流式视频的代价更加昂贵, 这主要归因于流式服务器的开销. 但另一方面, 
+流式视频相对渐进下载式视频来说更加可靠、更加安全. 许多视频服务器提供了内置的内容保护机制、加载平衡机制以及带宽切换机制.</p>
+<h3>内容</h3>
+<ul>
+	<li><a href="#how_streaming_works">流式视频的工作原理 </a></li>
+	<li><a href="#streamer_application">提供流式服务的应用程序</a></li>
+	<li><a href="#configuring_the_jw_player_to_stream_video">配置 JW Player 播放流式视频 </a></li>
+	<li><a href="#using_a_streaming_video_in_a_playlist">在播放列表中添加一个流式视频</a></li>
+</ul>
+<h2><a name="how_streaming_works"></a>流式视频的工作原理</h2>
+<p>流式的工作原理非常简单. 每次执行一个寻求操作, 媒体播放器用一系列的变量发送一个请求给服务器—要播放什么文件，以及播放的位置. 服务器就会从那个位置开始提供视频 .</p>
+<p>以下是一个简短的例子. 在你开始播放视频后, 不必等待直到视频完全加载 ，你可以随时跳转到任何位置.</p>
+<script type="text/javascript" src="streaming-video-with-the-jw-player_files/swfobject.js"></script>
+<h2><a
+ name="streamer_application"></a>提供流式服务的应用程序</h2>
+<script type="text/javascript">
+  var so = new SWFObject('http://player.longtailvideo.com/player.swf','ply','470','290','9','#ffffff');
+  so.addParam('allowfullscreen','true');
+  so.addParam('allowscriptaccess','always');
+  so.addParam('wmode','opaque');
+  so.addVariable('file','bunny.flv');
+  so.addVariable('streamer','rtmp://edge01.fms.dutchview.nl/botr');
+  so.write('mediaspace');
+</script>
+<p>一个提供流式服务的应用程序就是一个服务器端软件, 针对音视频流提供增强型文件传递服务. 
+它允许观看者寻求或跳转到视频的任意位置.</p>
+<p>当你嵌入一个渐进下载式视频时, 你需要的仅仅是 <em>file</em>
+ FlashVar. 该 FlashVar 告诉视频播放器视频存放于互联网的什么位置 . 但对于流式视频而言, 需要两个部分的信息—视频的所在路径以及提供视频流的软件所在的路径.</p>
+<p>比如:</p>
+<h4>HTTP</h4>
+<pre>http://www.mydomain.com/path/to/application.php?file=path/to/video.flv</pre>
+<h4>RTMP</h4>
+<pre>rtmp://www.mydomain.com/path/to/application/path/to/video.flv</pre>
+<p> 由于JW Player 无法自动侦测URL中的哪个部分是应用程序,哪个部分是视频, 所以你<strong>必须</strong>把路径分成 <em>file</em> 和 <em>streamer</em> 两个FlashVar.  <em>streamer</em>
+ FlashVar 会告诉播放器提供视频流的应用程序所在的路径:</p>
+<h4>HTTP</h4>
+<pre><span style="background-color: rgb(255, 255, 0);">streamer=</span>http://www.mydomain.com/path/to/application.php&amp;<span style="background-color: rgb(255, 255, 0);">file=</span>path/to/video.flv</pre>
+<h4>RTMP</h4>
+<pre><span style="background-color: rgb(255, 255, 0);">streamer=</span>rtmp://www.mydomain.com/path/to/application&amp;<span style="background-color: rgb(255, 255, 0);">file=</span>path/to/video.flv</pre>
+<p><strong>注意</strong>:文件的路径通常是流式服务器上的相对路径 . 不太可能直接从浏览器读取一个视频文件.</p>
+<h2><a name="configuring_the_jw_player_to_stream_video"></a>配置 JW Player播放流式视频</h2>
+<h3>配置选项</h3>
+<ul>
+	<li><strong>streamer</strong> (<em>undefined</em>):  
+rtmp/http 服务器的所在位置. 可以是一个RTMP 
+应用程序或外部的 PHP/ASP 文件. 更多信息.</li>
+	<li><strong>file</strong> (<em>undefined</em>): 媒体文件或播放列表的所在位置.</li>
+	<li><strong>type</strong> (JW4) / <strong>provider</strong> (JW5) (<em>undefined</em>):
+ 决定项目是何种类型的媒体文件,这样播放器就会用对应的provider进行 <a 
+href="http://developer.longtailvideo.com/trac/wiki/Player5MediaProviders">播放</a>.*</li>
+</ul>
+<p><strong>* 注意</strong><strong>:</strong>  JW Player总是试着自动侦测并且播放一个文件. 有时候, 不可能指定一个文件扩展名 (比如你在使用一个 token 安全措施). 这种情况下, 你应该总是设置 type (JW4) / provider 
+(JW5) FlashVar ,从而告诉播放器要如何播放视频.</p>
+<h4>HTTP</h4>
+<ul>
+	<li><strong>http.startparam</strong> (<em>'start'</em>): 询问参数,提供给服务器起始位置.</li>
+</ul>
+<h4>RTMP</h4>
+<ul>
+	<li><strong>rtmp.loadbalance</strong> (<em>false</em>):如果设置成 true,
+  RTMP 模块 (JW4) 或 MediaProvider (JW5) 会假定 
+FlashVar 是一个 XML 文件 (目前仅支持 SMIL 格式) ，作用是加载平衡.</li>
+	<li>f<strong>csubscribe</strong> (JW4) / <strong>rtmp.subscribe</strong>
+ (JW5) (<em>false</em>): 如果设置成 true,  RTMP 模块 (JW4) 或 
+MediaProvider (JW5) 会为加载平衡使用一个流订阅机制.</li>
+</ul>
+<h3>使用流式视频的播放器配置的例子</h3>
+<h4>HTTP</h4>
+<h5>Object / Embed</h5>
+<pre>&lt;object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' width='300' height='300' id='player1' name='player1'&gt;
+    &lt;param name='movie' value='player.swf'&gt;
+    &lt;param name='allowfullscreen' value='true'&gt;
+    &lt;param name='allowscriptaccess' value='always'&gt;
+    <span style="">&lt;param name='flashvars' value='<span style="background-color: rgb(255, 255, 0);">streamer=http://www.mydomain.com/path/to/application.php&amp;file=path/to/video.flv&amp;type=http</span>'&gt;
+</span>    &lt;embed id='player1'
+           name='player1'
+           src='player.swf'
+           width='300'
+           height='300'
+           allowscriptaccess='always'
+           allowfullscreen='true'
+           <span style="">flashvars='<span style="background-color: rgb(255, 255, 0);">streamer=http://www.mydomain.com/path/to/application.php&amp;ile=path/to/video.flv&amp;type=http</span>'
+</span>    /&gt;
+&lt;/object&gt;</pre>
+<h5>SWF Object 1.5</h5>
+<pre>&lt;script type="text/javascript"&gt;
+    var so = new SWFObject('player.swf','flashContent','300','250','9');
+    so.addParam('allowfullscreen','true');
+    so.addParam('allowscriptaccess','always');
+    so.addParam('bgcolor','#FFFFFF');
+    <span style="">so.addParam('flashvars','<span style="background-color: rgb(255, 255, 0);">streamer=http://www.mydomain.com/path/to/application.php&amp;file=path/to/video.flv&amp;type=http</span>');
+</span>    so.write('flashbanner');
+&lt;/script&gt;</pre>
+<h5>SWFObject 2.X</h5>
+<pre>&lt;script type="text/javascript"&gt;
+    <span style="">var flashvars = {
+            <span style="background-color: rgb(255, 255, 0);">'file':                'path/to/video.flv'</span>,
+            <span style="background-color: rgb(255, 255, 0);">'streamer':            'http://www.mydomain.com/path/to/application.php'</span>,
+            <span style="background-color: rgb(255, 255, 0);">'type':                'http'</span></span>
+    };
+    var params = {
+            'allowfullscreen':     'true',
+            'allowscriptaccess':   'always',
+            'bgcolor':             '#FFFFFF'
+    };
+    var attributes = {
+            'id':                  'player1',
+            'name':                'player1'
+    };
+    swfobject.embedSWF('player.swf', 'flashContent', '300', '250', '9', 'false', flashvars, params, attributes);
+&lt;/script&gt;</pre>
+<h4>RTMP</h4>
+<h5>Object / Embed</h5>
+<pre>&lt;object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' width='300' height='300' id='player1' name='player1'&gt;
+    &lt;param name='movie' value='player.swf'&gt;
+    &lt;param name='allowfullscreen' value='true'&gt;
+    &lt;param name='allowscriptaccess' value='always'&gt;
+    <span style="">&lt;param name='flashvars' value='<span style="background-color: rgb(255, 255, 0);">streamer=rtmp://www.mydomain.com/path/to/application&amp;file=path/to/video.flv&amp;type=rtmp</span>'&gt;</span>
+    &lt;embed id='player1'
+           name='player1'
+           src='player.swf'
+           width='300'
+           height='300'
+           allowscriptaccess='always'
+           allowfullscreen='true'
+<span style="">           flashvars='<span style="background-color: rgb(255, 255, 0);">streamer=rtmp://www.mydomain.com/path/to/application&amp;file=path/to/video.flv&amp;type=rtmp</span>'</span>
+    /&gt;
+&lt;/object&gt;</pre>
+<h5>SWF Object 1.5</h5>
+<pre>&lt;script type="text/javascript"&gt;
+    var so = new SWFObject('player.swf','flashContent','300','250','9');
+    so.addParam('allowfullscreen','true');
+    so.addParam('allowscriptaccess','always');
+    so.addParam('bgcolor','#FFFFFF');
+    so.addParam('flashvars','<span style="background-color: rgb(255, 255, 0);">streamer=rtmp://www.mydomain.com/path/to/application&amp;file=path/to/video.flv&amp;type=rtmp</span>');
+    so.write('flashbanner');
+&lt;/script&gt;</pre>
+<h5>SWFObject 2.X</h5>
+<pre>&lt;script type="text/javascript"&gt;
+   <span style=""> var flashvars = {
+            <span style="background-color: rgb(255, 255, 0);">'file':                        'path/to/video.flv'</span>,
+            <span style="background-color: rgb(255, 255, 0);">'streamer':                    'rtmp://www.mydomain.com/path/to/application'</span>,
+            <span style="background-color: rgb(255, 255, 0);">'type':                        'rtmp'</span></span>
+    };
+    var params = {
+            'allowfullscreen':             'true',
+            'allowscriptaccess':           'always',
+            'bgcolor':                     '#FFFFFF'
+    };
+    var attributes = {
+            'id':                          'player1',
+            'name':                        'player1'
+    };
+    swfobject.embedSWF('player.swf', 'flashContent', '300', '250', '9', 'false', flashvars, params, attributes);
+&lt;/script&gt;</pre>
+<h2><a name="using_a_streaming_video_in_a_playlist"></a>在播放列表中使用一个流式视频</h2>
+<p> JW Player 支持流式视频的播放列表. 可以通过以下几种方式实现.</p>
+<p>要是所有的视频都来自同一个服务器, 那么你只需定义 <strong>streamer</strong> 和 <strong>file</strong> 这两个FlashVars.播放器会自动使用应用程序来流式化播放列表中的所有视频.比如:</p>
+<pre><span style="background-color: rgb(255, 255, 0);">streamer=</span>rtmp://www.mydomain.com/application&amp;<span style="background-color: rgb(255, 255, 0);">file=</span>http://www.mydomain.com/path/to/playlist.xml</pre>
+<p>相应的播放列表 (不包括流式应用程序):</p>
+<pre>&lt;playlist version="1" xmlns="http://xspf.org/ns/0/"&gt;
+   &lt;tracklist&gt;
+      &lt;track&gt;
+         &lt;title&gt;The first video&lt;/title&gt;
+         &lt;location&gt;path/to/first.flv&lt;/location&gt;
+      &lt;/track&gt;
+      &lt;track&gt;
+         &lt;title&gt;Second video in the list.&lt;/title&gt;
+         &lt;location&gt;path/to/second.flv&lt;/location&gt;
+      &lt;/track&gt;
+      &lt;track&gt;
+         &lt;title&gt;And the final one.&lt;/title&gt;
+         &lt;location&gt;path/to/third.flv&lt;/location&gt;
+      &lt;/track&gt;
+   &lt;/tracklist&gt;
+&lt;/playlist&gt;</pre>
+<p>如果你的视频来自不同的服务器, 你就必须声明 <em>streamer</em>
+ FlashVar 给每一个播放列表条目 (JW 4.3版本起引进). 你还可以在一个播放列表里混合流式和非流式的视频.比如:</p>
+<pre>file=http://www.mysite.com/path/to/playlist.xml</pre>
+<p>相应的播放列表 (包含需要的流式应用程序):</p>
+<pre>&lt;playlist version="1" xmlns="http://xspf.org/ns/0/"&gt;
+   &lt;tracklist&gt;
+      &lt;track&gt;
+         &lt;title&gt;The first video is not streamed&lt;/title&gt;
+         &lt;location&gt;http://www.mysite.com/path/to/first.flv&lt;/location&gt;
+      &lt;/track&gt;
+      &lt;track&gt;
+         &lt;title&gt;The second video is streamed&lt;/title&gt;
+         &lt;location&gt;path/to/second.flv&lt;/location&gt;
+         <span style="background-color: rgb(255, 255, 0);">&lt;meta rel="streamer"&gt;rtmp://www.mydomain.com/application&lt;/meta&gt;</span>
+      &lt;/track&gt;
+      &lt;track&gt;
+         &lt;title&gt;The last video uses a different streamer&lt;/title&gt;
+         &lt;location&gt;path/to/third.flv&lt;/location&gt;
+         <span style="background-color: rgb(255, 255, 0);">&lt;meta rel="streamer"&gt;rtmp://www.someotherdomain.com/other_app&lt;/meta&gt;</span>
+      &lt;/track&gt;
+   &lt;/tracklist&gt;
+&lt;/playlist&gt;</pre>
+<p>这些例子使用的是 XSPF 播放列表格式.使用其他播放列表格式的方法见 <a 
+href="http://developer.longtailvideo.com/trac/wiki/FlashFormats">支持的播放列表</a>.</p>
+<h3>相关文档: <a 
+href="http://www.longtailvideo.com/support/jw-player/47/loadbalancing">加载平衡</a>,
+ <a 
+href="http://www.longtailvideo.com/support/jw-player/jw-flv-player-v4/27/bitrate-switching">比特率切换</a>, <a 
+href="http://www.longtailvideo.com/support/jw-player/48/securing-content-protect-your-video">安全化你的内容: 保护你的视频</a></h3>
+</div>	</div>
+
+	<div class="ClearFooter">&nbsp;</div>	
+</div>
+
+<div id="Footer">
+	<div class="FooterContainer clearfix">
+		<div class="FooterGrid">
+	<h5>JW Player</h5>
+	<ul class="FooterLinks">
+		<li><a href="http://www.longtailvideo.com/players/jw-flv-player/">JW 
+Player for Flash</a></li>
+		<li><a href="http://www.longtailvideo.com/players/jw-wmv-player/">JW 
+Player for Silverlight</a></li>
+		<li><a href="http://www.longtailvideo.com/players/jw-image-rotator/">JW
+ Image Rotator</a></li>
+		<li><a href="http://www.longtailvideo.com/players/jw-desktop-player/">JW
+ Desktop Player</a></li>
+		<li><a href="http://www.longtailvideo.com/support/jw-player/">Documentation</a></li>
+		<li><a href="http://www.longtailvideo.com/support/forums/jw-player/">Forums</a></li>
+		<li><a href="http://developer.longtailvideo.com/trac/">Developer Wiki</a></li>
+		<li><a href="http://developer.longtailvideo.com/trac/wiki/Player5Api">JW
+ Player APIs</a></li>
+		<li><a 
+href="http://developer.longtailvideo.com/trac/browser/trunk/fl5">JW 
+Player Source Code</a></li>
+	</ul>
+</div>
+			
+<div class="FooterGrid">
+	<h5>AddOns</h5>
+	<ul class="FooterLinks">
+		<li><a href="http://www.longtailvideo.com/addons/">Most Popular</a></li>
+		<li><a href="http://www.longtailvideo.com/addons/?q=&amp;sort=date">Recent
+ Additions</a></li>
+		<li><a href="http://www.longtailvideo.com/addons/skins/">Skins</a></li>
+		<li><a href="http://www.longtailvideo.com/addons/modules/">Modules</a></li>
+		<li><a href="http://www.longtailvideo.com/addons/plugins/">Plugins</a></li>
+		<li><a href="http://www.longtailvideo.com/support/addons/">Documentation</a></li>
+		<li><a href="http://www.longtailvideo.com/support/forums/addons/">Forums</a></li>
+	</ul>
+</div>
+			
+<div class="FooterGrid">
+	<h5>AdSolution</h5>
+	<ul class="FooterLinks">
+		<li><a href="http://www.longtailvideo.com/adsolution/">Overview</a></li>
+		<li><a href="http://www.longtailvideo.com/adsolution/demos/">Demos</a></li>
+		<li><a href="http://www.longtailvideo.com/adsolution/ad-networks/">Ad 
+Networks</a></li>
+		<li><a href="https://dashboard.longtailvideo.com/">Login</a></li>
+		<li><a href="https://dashboard.longtailvideo.com/signup.aspx">Sign Up</a></li>
+		<li><a href="http://www.longtailvideo.com/support/adsolution/">Documentation</a></li>
+		<li><a href="http://www.longtailvideo.com/support/forums/adsolution/">Forums</a></li>
+	</ul>
+</div>
+			
+<div class="FooterGrid">
+	<h5>Bits on the Run</h5>
+	<ul class="FooterLinks">
+		<li><a href="http://www.longtailvideo.com/bits-on-the-run/">Overview</a></li>
+		<li><a href="http://www.longtailvideo.com/bits-on-the-run/pricing/">Pricing</a></li>
+		<li><a href="https://manage.bitsontherun.com/login/">Login</a></li>
+		<li><a href="http://www.longtailvideo.com/bits-on-the-run/sign-up/">Sign
+ Up</a></li>
+		<li><a href="http://www.bitsontherun.com/documentation/system-api/">Documentation</a></li>
+		<li><a href="http://www.bitsontherun.com/faq/">Support</a></li>
+		<li><a href="http://www.bitsontherun.com/documentation/system-api/">Developer
+ API Docs</a></li>
+	</ul>
+</div>
+			
+<div class="FooterGrid">
+	<h5>Company</h5>
+	<ul class="FooterLinks">
+		<li><a href="http://www.longtailvideo.com/about/" rel="nofollow">About
+ Us</a></li>
+		<li><a href="http://www.longtailvideo.com/about/management-team" 
+rel="nofollow">Management Team</a></li>
+		<li><a href="http://www.longtailvideo.com/support/contact-us" 
+rel="nofowllow">Contact Us</a></li>
+		<li><a href="http://www.longtailvideo.com/support/faq">FAQ</a></li>
+		<li><a href="http://www.longtailvideo.com/partnerships/">Partnerships</a></li>
+		<li><a href="http://www.longtailvideo.com/privacy/" rel="nofollow">Privacy
+ Policy</a></li>
+		<li><a href="http://www.longtailvideo.com/about/terms-and-conditions" 
+rel="nofollow">Terms &amp; Conditions</a></li>
+		<li><a href="http://www.longtailvideo.com/about/careers" 
+rel="nofollow">Careers</a></li>
+	</ul>
+</div>
+
+<p class="Copyright">©2010 LongTail Ad Solutions. All Rights Reserved.</p>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="streaming-video-with-the-jw-player_files/js_962d5ee25e491b85abe4955fbcb3ecd3.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//--><!]]>
+</script><script src="streaming-video-with-the-jw-player_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+try{var pageTracker = _gat._getTracker("UA-4011032-1");pageTracker._trackPageview();} catch(err) {}
+//--><!]]>
+</script>
+</body></html>

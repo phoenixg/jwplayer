@@ -1,0 +1,232 @@
+/* General */
+body {
+	background: transparent;
+	margin: 0;
+	padding: 0;
+}
+a:link, a:visited { 
+	color:#58C;
+}
+object, embed {
+	display: block;
+	margin: 0 auto;
+	border-left: 1px solid #FFF;
+	border-right: 1px solid #FFF;
+}
+
+
+/* Header */
+#banner { 
+	margin: 10px 80px;
+}
+#mainnav {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	background-image: url(bar_bg.gif);
+	height: 27px;
+}
+#mainnav ul {
+	font-size: 12px;
+	display: block;
+	margin: 0 80px;
+	padding: 0;
+}
+#mainnav ul li a:link, #mainnav ul li a:visited {
+	background: none;
+	color:#FFF;
+	display: block;
+	float: left;
+	padding: 0 25px;
+	line-height: 27px;
+	margin: 0;
+	border-left: 0;
+	border-right: 1px solid #FFF;
+}
+#mainnav ul .first a:link, #mainnav ul .first a:visited {
+	border-left: 1px solid #FFF;
+}
+#mainnav ul .active a:link, #mainnav ul .active a:visited {
+	border-right: 1px solid #FFF;
+	background: #DDD;
+	color:#000;
+}
+#mainnav.nav ul li a:hover, #mainnav.nav ul .active a:hover {
+	background: none;
+	border-right: 1px solid #FFF;
+	background-color: #58C;
+}
+
+
+
+
+
+/* Main content */
+#main { 
+	background: url(main_bg.gif) top left repeat-x;
+	padding: 10px 80px;
+}
+#main .wikipage { 
+	padding-left: 0;
+}
+.milestone .info h2 a em {
+	color: #F90;
+}
+.milestone .info .progress .closed { 
+	background-color: #F90;
+}
+#content #ticket { 
+	background-color: #FEC;
+	border: 1px solid #CCC;
+}
+#content #attachments, #content #changelog {
+	background-color: #EEE;
+	border: 1px solid #CCC;
+}
+#main .wikipage p {
+	margin: 15px 0;
+}
+#main .wikipage table {
+	margin: 15px 0 30px 0;
+}
+#main .wikipage hr {
+	margin: 30px 0;
+	height: 1px;
+	border: 0;
+	background-color: #CCC;
+}
+#main h1 { 
+	margin: 20px 0 0 0;
+	font-size: 24px;
+}
+#main .wikipage h2 {
+	padding-top:30px;
+	border-top: 1px solid #CCC;
+	font-size: 18px;
+	margin: 30px 0 0 0;
+}
+#main .wikipage h3 {
+	font-size: 15px;
+	margin: 30px 0 0 0;
+}
+#main .wikipage ul {
+	margin-left: 0;
+	padding-left: 18px;
+}
+#main .wikipage ul ul {
+	padding-bottom: 9px;
+}
+#main strong {
+	font-weight: bold;
+}
+#main i {
+	font-style: italic;
+	color: #7A2;
+}
+#main dt {
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+#main dl ul {
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+#main ul strong {
+	font-family: monospace;
+}
+#main .wikipage pre {
+	margin: 15px 0;
+	background-color: #EFC;
+	border: 0;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	color:#000;
+	font-size: 12px;
+	padding: 10px;
+}
+#main .wikipage table { 
+	width: 100%;
+	border-collapse: collapse;
+	border: 0;
+}
+#main .wikipage td { 
+	padding: 5px;
+	font-size: 12px;
+	border-left: 0;
+	border-right: 0;
+}
+.wikipage .media { 
+	background-color:#eee;
+	margin: 30px 0;
+}
+
+#main .wikipage img {
+	display: block;
+	margin: 15px auto 30px auto;
+}
+
+/* TOC */
+.wiki-toc {
+	background-color:#eee;
+	padding: 15px 65px 15px 20px;
+	border:0;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	margin-left: 50px;
+}
+.wiki-toc h4 {
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+.wiki-toc ol li {
+	padding: 1px;
+}
+
+blockquote { 
+	color:#333;
+	font-style: italic;
+}
+
+/* Altlinks */
+#altlinks {
+	text-align: left;
+	background-color:#eee;
+	padding: 10px 0 0 10px;
+	margin:20px 0 40px 0;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+#altlinks h3 {
+	font-size: 15px;
+}
+#altlinks li { 
+	padding: 0 10px 0 0;
+}
+#altlinks li a:link {
+	border-bottom: 1px dotted #58C;
+	color: #58C;
+	background: url(../common/extlink.gif) 0 4px no-repeat;
+	padding-left: 20px;
+}
+#altlinks li a:hover {
+	border-bottom: 1px dotted #444;
+	color: #444;
+	background: url(../common/extlink.gif) 0 4px no-repeat;
+	padding-left: 20px;
+	background-color: #EEE;
+}
+iframe { 
+	border:0;
+	width: 100%;
+	height: 1200px;
+	padding: 0;
+	margin: 0;
+}
+
+
+
+
+/* Footer */
+#footer { 
+	display: none;
+}

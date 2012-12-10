@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html" />
+		<title>JW Player测试 by:爱业星辰</title>
+		
+		<style type='text/css'>
+		div {text-align:center;}
+		</style>
+		
+		<script type='text/javascript' src='swfobject.js'></script>
+		
+		<!-- 下面三个是JW Box用的文件 -->
+		<script type='text/javascript' src='jwbox/jquery.js'></script>
+		<script type='text/javascript' src='jwbox/jquery.jwbox.js'></script>
+		<link rel='stylesheet' type='text/css' href='jwbox/jwbox.css' />
+			
+	</head>
+
+<!-- 去除JW Player水印及右键官方菜单的方法？： http://bbs.foxitjob.com/read-htm-tid-1773-page-e-fpage-1.html -->
+<!-- eclipse pdt php程序下载：http://www.eclipse.org/pdt/release-notes/pdt2_2.html -->
+<!-- simple css：做css的好工具 -->
+<!-- 做php+mysql的个人收藏夹程式，以及有用的软件备忘程式 -->
+
+
+<body>
+	<h1>WRITTEN BY：爱业星辰 FULL VERSION</h1>
+	<a href='jsplaylist.html' target='_blank'>播放列表的演示</a>
+	
+	<h3>背景色为灰色：</h3>
+	<pre>s1.addParam('bgcolor','#AAAAAA');</pre>
+	<div id='test1'>播放器会在此元素里面。</div>
+	<script type='text/javascript'>
+		var s1 = new SWFObject('player.swf','player','400','300','9'); //('播放器名称','??','宽','高','?')
+		s1.addParam('allowfullscreen','true');//允许全屏显示，默认是false
+		s1.addParam('allowscriptaccess','always');//允许与外部脚本进行通信，以及链接到外部页面，默认是sameDomain
+		s1.addParam('wmode','opaque');//设置swf的透明度，可用来适应z-index，选项有opaque,transparent,window
+		s1.addParam('bgcolor','#AAAAAA');//背景颜色
+		s1.addParam('flashvars','file=video/video.flv');//设置flashvars
+		s1.write('test1');//同id
+	</script>
+	
+	<hr />
+		
+	<h3>背景色为红色：</h3>
+	<pre>s1.addParam('bgcolor','#FF0000');</pre>
+	<div id='test2'>播放器会在此元素里面。</div>
+	<script type='text/javascript'>
+		var s1 = new SWFObject('player.swf','player','400','300','9'); //('播放器名称','??','宽','高','?')
+		s1.addParam('allowfullscreen','true');//允许全屏显示
+		s1.addParam('allowscriptaccess','always');//允许脚本访问
+		s1.addParam('wmode','opaque');//设置为不透明？
+		s1.addParam('bgcolor','#FF0000');//背景颜色
+		s1.addParam('flashvars','file=video/video.flv');//设置flashvars
+		s1.write('test2');//同id
+	</script>
+	
+	<hr />
+	
+	<h3>播放器宽高值设为：1000×120；视频大小为：480×360</h3>
+	<pre>var s1 = new SWFObject('player.swf','player','1000','120','9'); </pre>
+	<div><img src="pic/rular1.jpg" /></div>
+	<div id='test3'>播放器会在此元素里面。</div>
+	<script type='text/javascript'>
+		var s1 = new SWFObject('player.swf','player','1000','120','9'); //('播放器名称','??','宽','高','?')
+		s1.addParam('allowfullscreen','true');//允许全屏显示
+		s1.addParam('allowscriptaccess','always');//允许脚本访问
+		s1.addParam('wmode','opaque');//设置为不透明？
+		s1.addParam('bgcolor','#555555');//背景颜色
+		s1.addParam('flashvars','file=video/video.flv');//设置flashvars
+		s1.write('test3');//同id
+	</script>
+	
+	<hr />
+	
+	<h3>播放器宽高值设为：200×400；视频大小为：480×360</h3>
+	<pre>var s1 = new SWFObject('player.swf','player','200','400','9'); </pre>
+	
+	<table align="center">
+		<tr>
+			<td><img src="pic/rular2.jpg" /></td>
+			<td><div id='test4'>播放器会在此元素里面。</div></td>
+		</tr>
+	</table>
+	
+	<script type='text/javascript'>
+		var s1 = new SWFObject('player.swf','player','200','400','9'); //('播放器名称','??','宽','高','?')
+		s1.addParam('allowfullscreen','true');//允许全屏显示
+		s1.addParam('allowscriptaccess','always');//允许脚本访问
+		s1.addParam('wmode','opaque');//设置为不透明？
+		s1.addParam('bgcolor','#555555');//背景颜色
+		s1.addParam('flashvars','file=video/video.flv');//设置flashvars
+		s1.write('test4');//同id
+	</script>
+	
+	<hr />
+	
+	<h3>使用XML播放列表（XSPF feed格式）</h3>
+	<pre>s1.addParam('flashvars','file=playlist1.xml');</pre>
+	<div id='test5'>播放器会在此元素里面。</div>
+	<script type='text/javascript'>
+		var s1 = new SWFObject('player.swf','player','400','324','9'); 
+		s1.addParam('allowfullscreen','true');
+		s1.addParam('allowscriptaccess','always');
+		s1.addParam('wmode','opaque');
+		s1.addParam('bgcolor','#555555');
+		s1.addParam('flashvars','file=playlist1.xml');
+		s1.write('test5');
+	</script>
+	
+	
+	<!-- 失败 
+	<h3>使用XML配置文件</h3>
+	<pre></pre>
+	<div id='test6'>播放器会在此元素里面。</div>
+	<script type='text/javascript'>
+		var s1 = new SWFObject('player.swf','player','400','324','9'); 
+		//s1.addParam('flashvars','file=video/video.flv');
+		s1.addParam('flashvars','config=config1.xml','file=video/video.flv');
+		s1.write('test6');
+	</script>
+	 -->
+	
+	<hr />
+	
+	<h3>JW Box弹出浮动层</h3>
+	<pre></pre>
+	<div class='jwbox'>
+		<img width='160' height='120' alt='JW Box图片' title='JW Box图片' src='pic/thumbnail1.jpg' />
+		<div class='jwbox_hidden'>
+			<div class='jwbox_content'>
+				<div id='test7'></div>
+			</div>
+		</div> 
+	</div>
+		
+	<script type='text/javascript'>
+		var s1 = new SWFObject('player.swf','player','400','324','9'); 
+		s1.addParam('allowfullscreen','true');
+		s1.addParam('allowscriptaccess','always');
+		s1.addParam('wmode','opaque');
+		s1.addParam('bgcolor','#555555');
+		s1.addParam('flashvars','file=playlist1.xml&playlist=none&playlist=180');
+		s1.write('test7');
+	</script>
+	
+	<hr />
+	
+	<h3>stretching=none，视频分辨率是多少尺寸，播放时就是多少尺寸，不进行拉伸</h3>
+	<h5>sample1：当播放器窗口小于视频分辨率时，视频会只显示一部分</h5>
+	<pre>var s1 = new SWFObject('player.swf','player','200','200','9'); </pre>
+	<pre>s1.addParam('flashvars','file=video/video.flv&stretching=none');</pre>
+	<div id='test8'>播放器会在此元素里面。</div>
+	<script type='text/javascript'>
+		var s1 = new SWFObject('player.swf','player','200','200','9'); 
+		s1.addParam('allowfullscreen','true');
+		s1.addParam('allowscriptaccess','always');
+		s1.addParam('wmode','opaque');
+		s1.addParam('bgcolor','#555555');
+		s1.addParam('flashvars','file=video/video.flv&stretching=none');
+		s1.write('test8');
+	</script>
+	<h5>sample2：当播放器窗口大于视频分辨率时，视频按照原尺寸播放，因此周围会显示出播放器的背景色</h5>
+	<pre>var s1 = new SWFObject('player.swf','player','600','600','9');</pre> 
+	<pre>s1.addParam('flashvars','file=video/video.flv&stretching=none');</pre>
+	<div id='test9'>播放器会在此元素里面。</div>
+	<script type='text/javascript'>
+		var s1 = new SWFObject('player.swf','player','600','600','9'); 
+		s1.addParam('allowfullscreen','true');
+		s1.addParam('allowscriptaccess','always');
+		s1.addParam('wmode','opaque');
+		s1.addParam('bgcolor','#555555');
+		s1.addParam('flashvars','file=video/video.flv&stretching=none');
+		s1.write('test9');
+	</script>
+	
+	<hr />
+	
+	<h3>stretching=exactfit，填充满播放器，但不成比例播放</h3>
+	<h5>sample1：<del>当播放器窗口小于视频分辨率时：</del></h5>
+	<pre>var s1 = new SWFObject('player.swf','player','200','100','9'); </pre>
+	<pre>s1.addParam('flashvars','file=video/video.flv&stretching=exactfit');</pre>
+	<div id='test10'>播放器会在此元素里面。</div>
+	<script type='text/javascript'>
+		var s1 = new SWFObject('player.swf','player','200','100','9'); 
+		s1.addParam('allowfullscreen','true');
+		s1.addParam('allowscriptaccess','always');
+		s1.addParam('wmode','opaque');
+		s1.addParam('bgcolor','#555555');
+		s1.addParam('flashvars','file=video/video.flv&stretching=exactfit');
+		s1.write('test10');
+	</script>
+	<h5>sample2：<del>当播放器窗口大于视频分辨率时：</del></h5>
+	<pre>var s1 = new SWFObject('player.swf','player','300','700','9'); </pre>
+	<pre>s1.addParam('flashvars','file=video/video.flv&stretching=exactfit');</pre>
+	<div id='test11'>播放器会在此元素里面。</div>
+	<script type='text/javascript'>
+		var s1 = new SWFObject('player.swf','player','300','700','9'); 
+		s1.addParam('allowfullscreen','true');
+		s1.addParam('allowscriptaccess','always');
+		s1.addParam('wmode','opaque');
+		s1.addParam('bgcolor','#555555');
+		s1.addParam('flashvars','file=video/video.flv&stretching=exactfit');
+		s1.write('test11');
+	</script>
+	
+	<hr />
+	
+	<h3>stretching=uniform，用黑边（即播放器背景）进行拉伸，保持原视频的宽高比</h3>
+	<pre>s1.addParam('flashvars','file=video/video.flv&stretching=uniform');</pre>
+	<div id='test12'>播放器会在此元素里面。</div>
+	<script type='text/javascript'>
+		var s1 = new SWFObject('player.swf','player','200','100','9'); 
+		s1.addParam('allowfullscreen','true');
+		s1.addParam('allowscriptaccess','always');
+		s1.addParam('wmode','opaque');
+		s1.addParam('bgcolor','#555555');
+		s1.addParam('flashvars','file=video/video.flv&stretching=uniform');
+		s1.write('test12');
+	</script>
+	
+	<hr />
+	
+	<h3>stretching=fill，类似uniform，但完全填充</h3>
+	<pre>s1.addParam('flashvars','file=video/video.flv&stretching=fill');</pre>
+	<div id='test13'>播放器会在此元素里面。</div>
+	<script type='text/javascript'>
+		var s1 = new SWFObject('player.swf','player','200','100','9'); 
+		s1.addParam('allowfullscreen','true');
+		s1.addParam('allowscriptaccess','always');
+		s1.addParam('wmode','opaque');
+		s1.addParam('bgcolor','#555555');
+		s1.addParam('flashvars','file=video/video.flv&stretching=fill');
+		s1.write('test13');
+	</script>
+	
+	<h3>wanfangvideo的播放器设置（相应作了改动）</h3>
+	<h5>失败的可能原因分析：</h5>
+	<ul>
+		<li>swf文件在编译时没有启用streching功能（解决方法见：<a href="http://drupal.org/node/338926">http://drupal.org/node/338926</a>）</li>
+		<li>JW 4版本不支持streching功能（解决方法：升级播放器）</li>
+	</ul>
+	<div style="position: absolute; z-index: 10000; background-image: none; top: 5100px; left: 200px; display: block;" id="test14" class="test14">
+		<div id="test14">
+			<object data="player.swf" name="test14" id="test14" type="application/x-shockwave-flash" height="150" width="800">
+				<param value="true" name="allowfullscreen">
+				<param value="always" name="allowscriptaccess">
+				<param value="opaque" name="wmode">
+				<param value="file=video/video.flv" name="flashvars">
+				<param value="exactfit" name="streching">
+			</object>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

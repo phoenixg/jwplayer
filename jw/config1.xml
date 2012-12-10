@@ -1,0 +1,9 @@
+<config>
+	<repeat>true</repeat>
+	<backcolor>555555</backcolor>
+	<volume>40</volume>
+	<playlist>right</right>
+	<playlist.size>150</playlist.size>
+	<controlbar>over</controlbar>
+</config>
+

@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html class="js" dir="ltr" xml:lang="en" 
+xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="shortcut icon" 
+href="http://www.longtailvideo.com/support/sites/all/themes/community/favicon.ico"
+ type="image/x-icon">
+	<title>Loadbalancing | LongTail Video | Home of the JW Player</title>
+	<link type="text/css" rel="stylesheet" media="all" 
+href="loadbalancing_files/codefilter.css">
+<link type="text/css" rel="stylesheet" media="all" 
+href="loadbalancing_files/views.css">
+<link type="text/css" rel="stylesheet" media="all" 
+href="loadbalancing_files/css_e6a3135564326586fc343fa0f3f43e1e.css">
+	<script type="text/javascript" src="loadbalancing_files/js_437e16a1ae228761d316f2d271598549.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/support/", "googleanalytics": { "trackOutgoing": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|avi|csv|doc|exe|flv|gif|gz|jpe?g|js|mp(3|4|e?g)|mov|pdf|phps|png|ppt|rar|sit|tar|torrent|txt|wma|wmv|xls|xml|zip" } });
+//--><!]]>
+</script>
+	<script type="text/javascript" src="loadbalancing_files/swfobject.js"></script>
+</head><body>
+<div id="Container" class="clearfix">
+
+		<div id="TopStrip">
+		<ul class="TabNav clearfix" id="Top">
+			<li class="Logo"><a href="http://www.longtailvideo.com/">LongTail 
+Video Home</a></li>
+			<li class="Products"><a href="http://www.longtailvideo.com/">Products</a></li>
+			<li class="Support"><a href="http://www.longtailvideo.com/support/">Support</a></li>
+		</ul>
+		<a href="http://www.longtailvideo.com/order/" class="OrderBtn Button 
+Orange">Order Now</a>
+		<span class="LoginGroup">
+			<strong>AdSolution</strong>
+			<a href="https://dashboard.longtailvideo.com/signup.aspx">Sign Up</a>
+ | <a href="https://dashboard.longtailvideo.com/">Login »</a>
+		</span>
+		<span class="LoginGroup">
+			<strong>Bits on the Run</strong>
+			<a href="http://www.longtailvideo.com/bits-on-the-run/sign-up">Sign 
+Up</a> | <a href="https://manage.bitsontherun.com/login/">Login »</a>
+		</span>
+	</div>
+	<div id="Header">
+		<a href="http://www.longtailvideo.com/support/" class="LogoHeader"><img
+ src="loadbalancing_files/logo_header.png" alt="LongTail Video" 
+title="LongTail Video" border="0" height="41" width="140"></a>
+		
+		<ul class="TertiaryLinks">
+			<li><a href="http://www.longtailvideo.com/support/forums/" 
+class="Forums">Forums</a></li>
+			<li><a 
+href="http://www.longtailvideo.com/support/jw-player-setup-wizard/" 
+class="Wizard">Wizard</a></li>
+			<li><a href="http://www.longtailvideo.com/players/jw-flv-player/" 
+class="Download">Download</a></li>
+		</ul>
+		
+		<ul class="BreadCrumbs"><li><a 
+href="http://www.longtailvideo.com/support/">Home</a> »</li><li><a 
+href="http://www.longtailvideo.com/support/longtail-support-community">LongTail
+ Support Community</a> »</li><li><a 
+href="http://www.longtailvideo.com/support/jw-player">JW Player</a> »</li><li
+ class="last">Loadbalancing</li></ul>
+		
+<ul class="TopNav">		     <li id="JWPlayer" class="Top Active hoverable"><a
+ href="http://www.longtailvideo.com/support/jw-player" class="TopLevel">JW
+ Player</a></li>
+		     <li id="AddOns" class="Top hoverable"><a 
+href="http://www.longtailvideo.com/support/addons" class="TopLevel">AddOns</a></li>
+		     <li id="AdSolution" class="Top hoverable"><a 
+href="http://www.longtailvideo.com/support/adsolution" class="TopLevel">AdSolution</a></li>
+		     <li id="Forums" class="Top hoverable"><a 
+href="http://www.longtailvideo.com/support/forums" class="TopLevel">Forums</a></li>
+		     <li id="Blog" class="Top hoverable"><a 
+href="http://www.longtailvideo.com/support/blog" class="TopLevel">Blog</a></li>
+	  </ul>
+	</div>	
+			
+	
+	<div class="Grid12 Document" style="position: relative;">
+				
+<h1>加载平衡</h1>
+
+	<style>
+		div.Document h1 {
+			margin-left: 240px;
+		}
+	</style>
+	<div class="Grid3 DocumentSidebar" style="margin-top: -60px;">
+	  <ul>
+		  <li class="title"></li>
+    <div class="Grid8">
+  <p><strong>事先请阅读:</strong>&nbsp;&nbsp; <a 
+href="http://www.longtailvideo.com/support/jw-player/46/streaming-video-with-the-jw-player">用 JW Player播放流式视频</a></p>
+<h2>目的</h2>
+  <p>此向导会帮助你了解 JW Player所支持的加载平衡类型.</p>
+  <h2>介绍</h2>
+  <p>加载平衡（Loadbalancing） 是一项允许分配资源以共同协作的技术, 以应对计算机承受的负荷. 在视频分发的领域内, 使用它来分开加载的视频,以便确保视频服务的质量 .</p>
+  <h3>内容</h3>
+  <ul>
+	<li><a href="#SMIL_Files">SMIL 文件</a></li>
+	<li><a href="#HTTP">HTTP 加载平衡</a></li>
+	<li><a href="#RTMP">RTMP 加载平衡</a></li>
+</ul>
+<h2><a name="SMIL_Files"></a>SMIL 文件</h2>
+<p> SMIL (Synchronized Multimedia Integration Language) 文件是一个多媒体演示的文件类型. 为了帮助加载平衡,  SMIL 文件会定义很多个位置, 每个位置都定位到一个服务器, 为每一个视频文件这么做. 播放器会随机地选择使用哪个位置上的视频,
+ 这样实现平衡 “加载.”</p>
+<p>在 JW Player中,只有  RTMP MediaProvider 支持通过 SMIL 文件进行加载平衡. 要使用一个 SMIL 文件, 只需简单地设置 FlashVar 指向SMIL文件的URL , 然后设置 RTMP.加载平衡的 
+FlashVar 为true即可.</p>
+<h2><a name="HTTP"></a>HTTP</h2>
+<h5>DNS 加载平衡</h5>
+<p>域名系统 (DNS) 会对域名或 URL进行翻译, 翻译成一个 IP 地址,对应到一个物理服务器. (广泛使用的类比是将 DNS 比作电话簿.) 因为 DNS 允许每一个域名有多个列表, 所以你可以在很多的机器间实现加载平衡,只需在同一个 DNS 条目内添加上所有的机器即可.</p>
+<p>这一过程会由 Flash 播放器自行处理, 但你需要配置一下你的 DNS 条目内包含所有的服务器.</p>
+<h5>重定向</h5>
+<p>服务器是这样处理重定向的,得到一个文件请求,然后给你一个新地址. 正因重定向可以指向任何服务器,所以这成为了在很多个服务器间高效的实现加载平衡的方法.</p>
+<p>这一过程会由Flash 播放器自行处理, 但你需要配置你的服务器来正确地进行重定向.</p>
+<h2><a name="RTMP"></a>RTMP</h2>
+<p>RTMP 加载平衡的配置比 HTTP 
+加载平衡的配置更具挑战性,因为它需要专门完成. 注意比特率切换功能通常都是在 RTMP 服务器上完成的,所以你不能使用 DNS 加载平衡 和 
+RTMP的结合.</p>
+<h5>FCSubscribe</h5>
+<p>FCSubscribe是运行在RTMP服务器上的自定义的 ActionScript 代码. 
+播放器会嗅探主RTMP服务器上的此脚本 (通过 "connection.call" 命令) 并得到边缘RTMP服务器的 URL .</p>
+<p>对于 FCSubscribe 的支持是有限的—如果需要这个功能请保持使用 JW4版本.</p>
+<h5>重定向</h5>
+<p>最近, RTMP 开始实现原生对重定向的支持了.
+ 这个公司使用的是和 FCSubscribe一样的脚本层, 但内置进了 FMS3 和 Wowza 1.7+ 服务器上.</p>
+<h3>相关文档: <a 
+href="http://www.longtailvideo.com/support/jw-player/48/securing-content-protect-your-video">安全化你的内容: 保护你的视频</a></h3>
+<h3>此外, 尽管和加载平衡不能相容, 这篇文章还是和加载平衡相关:<a 
+href="http://www.longtailvideo.com/support/jw-player/jw-flv-player-v4/27/bitrate-switching">
+ 比特率切换</a></h3>
+
+
+
+
+<div id="Footer">
+	<div class="FooterContainer clearfix">
+		<div class="FooterGrid">
+	<h5>JW Player</h5>
+	<ul class="FooterLinks">
+		<li><a href="http://www.longtailvideo.com/players/jw-flv-player/">JW 
+Player for Flash</a></li>
+		<li><a href="http://www.longtailvideo.com/players/jw-wmv-player/">JW 
+Player for Silverlight</a></li>
+		<li><a href="http://www.longtailvideo.com/players/jw-image-rotator/">JW
+ Image Rotator</a></li>
+		<li><a href="http://www.longtailvideo.com/players/jw-desktop-player/">JW
+ Desktop Player</a></li>
+		<li><a href="http://www.longtailvideo.com/support/jw-player/">Documentation</a></li>
+		<li><a href="http://www.longtailvideo.com/support/forums/jw-player/">Forums</a></li>
+		<li><a href="http://developer.longtailvideo.com/trac/">Developer Wiki</a></li>
+		<li><a href="http://developer.longtailvideo.com/trac/wiki/Player5Api">JW
+ Player APIs</a></li>
+		<li><a 
+href="http://developer.longtailvideo.com/trac/browser/trunk/fl5">JW 
+Player Source Code</a></li>
+	</ul>
+</div>
+			
+<div class="FooterGrid">
+	<h5>AddOns</h5>
+	<ul class="FooterLinks">
+		<li><a href="http://www.longtailvideo.com/addons/">Most Popular</a></li>
+		<li><a href="http://www.longtailvideo.com/addons/?q=&amp;sort=date">Recent
+ Additions</a></li>
+		<li><a href="http://www.longtailvideo.com/addons/skins/">Skins</a></li>
+		<li><a href="http://www.longtailvideo.com/addons/modules/">Modules</a></li>
+		<li><a href="http://www.longtailvideo.com/addons/plugins/">Plugins</a></li>
+		<li><a href="http://www.longtailvideo.com/support/addons/">Documentation</a></li>
+		<li><a href="http://www.longtailvideo.com/support/forums/addons/">Forums</a></li>
+	</ul>
+</div>
+			
+<div class="FooterGrid">
+	<h5>AdSolution</h5>
+	<ul class="FooterLinks">
+		<li><a href="http://www.longtailvideo.com/adsolution/">Overview</a></li>
+		<li><a href="http://www.longtailvideo.com/adsolution/demos/">Demos</a></li>
+		<li><a href="http://www.longtailvideo.com/adsolution/ad-networks/">Ad 
+Networks</a></li>
+		<li><a href="https://dashboard.longtailvideo.com/">Login</a></li>
+		<li><a href="https://dashboard.longtailvideo.com/signup.aspx">Sign Up</a></li>
+		<li><a href="http://www.longtailvideo.com/support/adsolution/">Documentation</a></li>
+		<li><a href="http://www.longtailvideo.com/support/forums/adsolution/">Forums</a></li>
+	</ul>
+</div>
+			
+<div class="FooterGrid">
+	<h5>Bits on the Run</h5>
+	<ul class="FooterLinks">
+		<li><a href="http://www.longtailvideo.com/bits-on-the-run/">Overview</a></li>
+		<li><a href="http://www.longtailvideo.com/bits-on-the-run/pricing/">Pricing</a></li>
+		<li><a href="https://manage.bitsontherun.com/login/">Login</a></li>
+		<li><a href="http://www.longtailvideo.com/bits-on-the-run/sign-up/">Sign
+ Up</a></li>
+		<li><a href="http://www.bitsontherun.com/documentation/system-api/">Documentation</a></li>
+		<li><a href="http://www.bitsontherun.com/faq/">Support</a></li>
+		<li><a href="http://www.bitsontherun.com/documentation/system-api/">Developer
+ API Docs</a></li>
+	</ul>
+</div>
+			
+<div class="FooterGrid">
+	<h5>Company</h5>
+	<ul class="FooterLinks">
+		<li><a href="http://www.longtailvideo.com/about/" rel="nofollow">About
+ Us</a></li>
+		<li><a href="http://www.longtailvideo.com/about/management-team" 
+rel="nofollow">Management Team</a></li>
+		<li><a href="http://www.longtailvideo.com/support/contact-us" 
+rel="nofowllow">Contact Us</a></li>
+		<li><a href="http://www.longtailvideo.com/support/faq">FAQ</a></li>
+		<li><a href="http://www.longtailvideo.com/partnerships/">Partnerships</a></li>
+		<li><a href="http://www.longtailvideo.com/privacy/" rel="nofollow">Privacy
+ Policy</a></li>
+		<li><a href="http://www.longtailvideo.com/about/terms-and-conditions" 
+rel="nofollow">Terms &amp; Conditions</a></li>
+		<li><a href="http://www.longtailvideo.com/about/careers" 
+rel="nofollow">Careers</a></li>
+	</ul>
+</div>
+
+<p class="Copyright">©2010 LongTail Ad Solutions. All Rights Reserved.</p>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="loadbalancing_files/js_962d5ee25e491b85abe4955fbcb3ecd3.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//--><!]]>
+</script><script src="loadbalancing_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+try{var pageTracker = _gat._getTracker("UA-4011032-1");pageTracker._trackPageview();} catch(err) {}
+//--><!]]>
+</script>
+</body></html>
